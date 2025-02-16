@@ -1,0 +1,43 @@
+@import url('./reset.css');
+
+.mono-ui__button {
+  display: inline-block;
+  border-radius: var(--mono-ui--radius-sm);
+
+  border: 1px solid var(--mono-ui--color-500);
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
+
+  transition:
+    color 0.15ms ease-in-out,
+    background-color 100ms ease-in-out,
+    border-color 100ms ease-in-out;
+}
+
+.mono-ui__button--default {
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-500);
+
+  &:hover {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--white);
+  }
+  &:active {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-200);
+  }
+}
+
+.mono-ui__button--outline {
+  color: var(--mono-ui--color-500);
+  background-color: var(--mono-ui--color-white);
+
+  &:hover {
+    color: var(--mono-ui--color-white);
+    background-color: var(--mono-ui--color-500);
+  }
+  &:active {
+    color: var(--mono-ui--color-white);
+    background-color: var(--mono-ui--color-400);
+    border-color: var(--mono-ui--color-400);
+  }
+}

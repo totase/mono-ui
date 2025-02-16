@@ -1,0 +1,11 @@
+button {
+  border: none;
+  background: none;
+
+  padding: 0;
+  padding-block: 0;
+
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
