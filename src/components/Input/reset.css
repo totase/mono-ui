@@ -1,0 +1,11 @@
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'] {
+  padding: 0;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: unset;
+}
