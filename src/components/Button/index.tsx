@@ -8,10 +8,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   loading?: boolean;
   outline?: boolean;
+  className?: string;
 }
 
-const Button = ({ children, onClick, disabled, outline = false, loading = false, ...rest }: ButtonProps) => {
-  const classNames = cx('mono-ui__button', {
+const Button = ({ children, onClick, disabled, className, outline = false, loading = false, ...rest }: ButtonProps) => {
+  const classNames = cx('mono-ui__button', className, {
     'mono-ui__button--default': !outline,
     'mono-ui__button--outline': outline,
     'mono-ui__button--loading': loading,
