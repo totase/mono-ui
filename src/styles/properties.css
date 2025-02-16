@@ -1,35 +1,36 @@
 :root {
   /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 0.75rem;
-  --spacing-lg: 1rem;
-  --spacing-xl: 1.25rem;
+  --mono-ui--spacing-xs: 0.25rem; /* 4px */
+  --mono-ui--spacing-sm: 0.5rem; /* 8px */
+  --mono-ui--spacing-md: 0.75rem; /* 12px */
+  --mono-ui--spacing-lg: 1rem; /* 16px */
+  --mono-ui--spacing-xl: 1.25rem; /* 20px */
 
   /* Font sizes */
-  --font-size-small: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h5: 1.125rem;
+  --mono-ui--font-size-small: 0.875rem; /* 14px */
+  --mono-ui--font-size-base: 1rem; /* 16px */
+
+  --mono-ui--font-size-h1: 2.5rem; /* 40px */
+  --mono-ui--font-size-h2: 2rem; /* 32px */
+  --mono-ui--font-size-h3: 1.5rem; /* 24px */
+  --mono-ui--font-size-h4: 1.25rem; /* 20px */
+  --mono-ui--font-size-h5: 1.125rem; /* 18px */
 
   /* Colors */
   /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
-  --white: #fff;
+  --mono-ui--color-white: #fff;
 
-  --mono-100: #f8f9fa;
-  --mono-200: #dee2e6;
-  --mono-300: #adb5bd;
-  --mono-400: #495057;
-  --mono-500: #212529;
+  --mono-ui--color-100: #f8f9fa;
+  --mono-ui--color-200: #dee2e6;
+  --mono-ui--color-300: #adb5bd;
+  --mono-ui--color-400: #495057;
+  --mono-ui--color-500: #212529;
 
-  --black: #000;
+  --mono-ui--color-black: #000;
 
   /* Border radius */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-rounded: 100px;
+  --mono-ui--radius-sm: 8px;
+  --mono-ui--radius-md: 16px;
+  --mono-ui--radius-lg: 24px;
+  --mono-ui--radius-rounded: 100px;
 }
