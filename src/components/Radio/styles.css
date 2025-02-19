@@ -1,0 +1,60 @@
+.mono-ui__radio__container {
+  display: flex;
+  align-items: center;
+  gap: var(--mono-ui--spacing-sm);
+}
+
+.mono-ui__radio__label {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.25;
+}
+
+.mono-ui__radio {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: var(--mono-ui--radius-rounded);
+  border: 1px solid var(--mono-ui--color-500);
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease;
+  }
+
+  &:has(input[type='radio']:checked)::before {
+    background-color: var(--mono-ui--color-500);
+  }
+
+  &:has(input[type='radio']:active)::before {
+    border-color: var(--mono-ui--color-400);
+    background-color: var(--mono-ui--color-400);
+  }
+
+  & > input[type='radio'] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    margin: 0;
+    opacity: 0;
+  }
+}
