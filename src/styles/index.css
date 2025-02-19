@@ -1,4 +1,5 @@
 @import url('./properties.css');
+@import url('./global.css');
 
 :root {
   color-scheme: light dark;

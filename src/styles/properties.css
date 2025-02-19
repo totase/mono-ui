@@ -29,8 +29,8 @@
   --mono-ui--color-black: #000;
 
   /* Border radius */
-  --mono-ui--radius-sm: 8px;
-  --mono-ui--radius-md: 16px;
-  --mono-ui--radius-lg: 24px;
+  --mono-ui--radius-sm: 4px;
+  --mono-ui--radius-md: 6px;
+  --mono-ui--radius-lg: 16px;
   --mono-ui--radius-rounded: 100px;
 }
