@@ -19,7 +19,7 @@ const Radio = ({ id, label, disabled, description, readOnly, ...rest }: RadioPro
 
   return (
     <div className="mono-ui__radio__container">
-      <span className={classNames}>
+      <span className={classNames} tabIndex={0}>
         <input
           id={id}
           type="radio"
