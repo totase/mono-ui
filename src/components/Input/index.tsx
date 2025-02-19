@@ -5,7 +5,6 @@ import './styles.css';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
-  className?: string;
   type?: 'text' | 'password' | 'email' | 'number';
 }
 

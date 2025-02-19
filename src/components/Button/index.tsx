@@ -1,14 +1,12 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import cx from 'clsx';
 
 import './styles.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  children: ReactNode;
   loading?: boolean;
   outline?: boolean;
-  className?: string;
 }
 
 const Button = ({ children, onClick, disabled, className, outline = false, loading = false, ...rest }: ButtonProps) => {
