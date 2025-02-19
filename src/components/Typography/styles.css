@@ -1,0 +1,11 @@
+.mono-ui__typography {
+  margin: 0;
+
+  &:not(.mono-ui__typography--light) {
+    color: var(--mono-ui--color-500);
+  }
+
+  &.mono-ui__typography--light {
+    color: var(--mono-ui--color-400);
+  }
+}
