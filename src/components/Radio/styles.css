@@ -4,13 +4,6 @@
   gap: var(--mono-ui--spacing-sm);
 }
 
-.mono-ui__radio__label {
-  display: flex;
-  flex-direction: column;
-
-  line-height: 1.25;
-}
-
 .mono-ui__radio {
   position: relative;
 

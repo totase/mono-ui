@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import Typography from '../Typography';
+import { Label } from '..';
 
 import './styles.css';
 
@@ -28,15 +28,7 @@ const Checkbox = ({ id, label, disabled, description, ...rest }: CheckboxProps) 
         />
       </span>
 
-      <label className="mono-ui__checkbox__label" htmlFor={id}>
-        {label}
-
-        {description && (
-          <Typography id={`${id}-description`} as="span" light>
-            {description}
-          </Typography>
-        )}
-      </label>
+      <Label id={id} label={label} description={description} />
     </div>
   );
 };

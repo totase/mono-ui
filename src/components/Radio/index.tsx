@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Typography } from '..';
+import { Label } from '..';
 
 import './styles.css';
 
@@ -28,15 +28,7 @@ const Radio = ({ id, label, disabled, description, ...rest }: RadioProps) => {
         />
       </span>
 
-      <label className="mono-ui__radio__label" htmlFor={id}>
-        {label}
-
-        {description && (
-          <Typography id={`${id}-description`} as="span" light>
-            {description}
-          </Typography>
-        )}
-      </label>
+      <Label id={id} label={label} description={description} />
     </div>
   );
 };
