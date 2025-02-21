@@ -32,7 +32,7 @@ const Radio = ({ id, label, disabled, description, ...rest }: RadioProps) => {
         {label}
 
         {description && (
-          <Typography id={`${id}-description`} as="span">
+          <Typography id={`${id}-description`} as="span" light>
             {description}
           </Typography>
         )}

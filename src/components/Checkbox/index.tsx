@@ -32,7 +32,7 @@ const Checkbox = ({ id, label, disabled, description, ...rest }: CheckboxProps) 
         {label}
 
         {description && (
-          <Typography id={`${id}-description`} as="span">
+          <Typography id={`${id}-description`} as="span" light>
             {description}
           </Typography>
         )}
