@@ -1,0 +1,60 @@
+.mono-ui__checkbox__container {
+  display: flex;
+  align-items: center;
+  gap: var(--mono-ui--spacing-sm);
+}
+
+.mono-ui__checkbox__label {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.25;
+}
+
+.mono-ui__checkbox {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: var(--mono-ui--radius-sm);
+  border: 1px solid var(--mono-ui--color-500);
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 8px;
+
+    border: solid var(--mono-ui--color-white);
+    border-width: 0 2px 2px 0;
+
+    transform: translateY(-60%) translateX(-50%) rotate(45deg);
+
+    transition: border-color 150ms ease;
+  }
+
+  &:has(input[type='checkbox']:checked)::before {
+    border-color: var(--mono-ui--color-500);
+  }
+
+  &:has(input[type='checkbox']:active) {
+    border-color: var(--mono-ui--color-400);
+  }
+  &:has(input[type='checkbox']:active)::before {
+    border-color: var(--mono-ui--color-400);
+  }
+
+  & > input[type='checkbox'] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    margin: 0;
+    opacity: 0;
+  }
+}
