@@ -5,16 +5,15 @@ import { Typography } from '..';
 
 import './styles.css';
 
-export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
   id: string;
   label: string;
   description?: string;
 }
 
-const Radio = ({ id, label, disabled, description, readOnly, ...rest }: RadioProps) => {
+const Radio = ({ id, label, disabled, description, ...rest }: RadioProps) => {
   const classNames = cx('mono-ui__radio', {
     'mono-ui__radio--disabled': disabled,
-    'mono-ui__radio--readOnly': readOnly,
   });
 
   return (
@@ -24,7 +23,6 @@ const Radio = ({ id, label, disabled, description, readOnly, ...rest }: RadioPro
           id={id}
           type="radio"
           disabled={disabled}
-          readOnly={readOnly}
           aria-describedby={description ? `${id}-description` : undefined}
           {...rest}
         />
