@@ -10,9 +10,9 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   description?: string;
 }
 
-const Label = ({ id, label, description }: LabelProps) => {
+const Label = ({ id, label, description, ...rest }: LabelProps) => {
   return (
-    <label className="mono-ui__label" htmlFor={id}>
+    <label className="mono-ui__label" htmlFor={id} {...rest}>
       {label}
 
       {description && (
