@@ -16,7 +16,7 @@ const Input = ({ id, label, className, type = 'text', disabled, readOnly, ...res
   });
 
   return (
-    <div className="mono-ui__input--container">
+    <div className="mono-ui__input__container">
       <label htmlFor={id}>{label}</label>
       <input id={id} type={type} className={classNames} disabled={disabled} readOnly={readOnly} {...rest} />
     </div>
