@@ -8,4 +8,68 @@
   &.mono-ui__typography--light {
     color: var(--mono-ui--color-400);
   }
+
+  &.mono-ui__typography--regular {
+    font-weight: 400;
+  }
+  &.mono-ui__typography--medium {
+    font-weight: 500;
+  }
+  &.mono-ui__typography--bold {
+    font-weight: 700;
+  }
+}
+
+p,
+a,
+span,
+button,
+label,
+h6 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-base);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-small);
+  }
+}
+h1 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-h1);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-h2);
+  }
+}
+h2 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-h2);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-h3);
+  }
+}
+h3 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-h3);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-h4);
+  }
+}
+h4 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-h4);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-h5);
+  }
+}
+h5 {
+  &:not(.mono-ui__typography--tiny) {
+    font-size: var(--mono-ui--font-size-h5);
+  }
+  &.mono-ui__typography--tiny {
+    font-size: var(--mono-ui--font-size-base);
+  }
 }
