@@ -1,0 +1,25 @@
+.mono-ui__badge {
+  line-height: 1;
+
+  border: 1px solid var(--mono-ui--color-500);
+  border-radius: var(--mono-ui--radius-rounded);
+
+  &:not(.mono-ui__badge--tiny) {
+    padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-md);
+  }
+}
+
+.mono-ui__badge--tiny {
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+  font-size: var(--mono-ui--font-size-small);
+}
+
+.mono-ui__badge--default {
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-500);
+}
+
+.mono-ui__button--outline {
+  color: var(--mono-ui--color-500);
+  background-color: var(--mono-ui--color-white);
+}
