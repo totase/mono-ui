@@ -20,12 +20,12 @@
   }
 }
 
-p,
-a,
-span,
-button,
-label,
-h6 {
+p.mono-ui__typography,
+a.mono-ui__typography,
+span.mono-ui__typography,
+button.mono-ui__typography,
+label.mono-ui__typography,
+h6.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-base);
   }
@@ -33,7 +33,7 @@ h6 {
     font-size: var(--mono-ui--font-size-small);
   }
 }
-h1 {
+h1.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-h1);
   }
@@ -41,7 +41,7 @@ h1 {
     font-size: var(--mono-ui--font-size-h2);
   }
 }
-h2 {
+h2.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-h2);
   }
@@ -49,7 +49,7 @@ h2 {
     font-size: var(--mono-ui--font-size-h3);
   }
 }
-h3 {
+h3.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-h3);
   }
@@ -57,7 +57,7 @@ h3 {
     font-size: var(--mono-ui--font-size-h4);
   }
 }
-h4 {
+h4.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-h4);
   }
@@ -65,7 +65,7 @@ h4 {
     font-size: var(--mono-ui--font-size-h5);
   }
 }
-h5 {
+h5.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-h5);
   }
