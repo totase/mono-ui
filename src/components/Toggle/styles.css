@@ -1,0 +1,65 @@
+.mono-ui__toggle__container {
+  display: flex;
+  align-items: center;
+  gap: var(--mono-ui--spacing-sm);
+}
+
+.mono-ui__toggle {
+  position: relative;
+
+  width: 42px;
+  height: 24px;
+
+  border-radius: var(--mono-ui--radius-rounded);
+  border: 1px solid var(--mono-ui--color-500);
+
+  cursor: pointer;
+
+  transition: background-color 150ms ease;
+
+  &:not(:has(input[type='checkbox']:checked)) {
+    background-color: var(--mono-ui--color-300);
+
+    & .mono-ui__toggle__thumb {
+      transform: translateY(-50%) translateX(4px);
+    }
+  }
+
+  &:has(input[type='checkbox']:checked) {
+    background-color: var(--mono-ui--color-500);
+
+    & .mono-ui__toggle__thumb {
+      transform: translateY(-50%) translateX(21px);
+    }
+  }
+
+  &:has(input[type='checkbox']:active) {
+    border-color: var(--mono-ui--color-400);
+  }
+  &:has(input[type='checkbox']:active)::before {
+    border-color: var(--mono-ui--color-400);
+  }
+
+  & > input[type='checkbox'] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    margin: 0;
+    opacity: 0;
+  }
+}
+
+.mono-ui__toggle__thumb {
+  top: 50%;
+  position: absolute;
+  pointer-events: none;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: var(--mono-ui--radius-rounded);
+  background-color: var(--mono-ui--color-white);
+
+  transition: transform 150ms ease;
+}
