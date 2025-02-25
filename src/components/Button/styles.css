@@ -2,40 +2,56 @@
   display: inline-block;
   border-radius: var(--mono-ui--radius-sm);
 
-  border: 1px solid var(--mono-ui--color-500);
   padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
 
   transition:
-    color 0.15ms ease-in-out,
-    background-color 100ms ease-in-out,
-    border-color 100ms ease-in-out;
+    color 100ms ease-in-out,
+    background-color 150ms ease-in-out,
+    border-color 150ms ease-in-out;
 }
 
 .mono-ui__button--default {
   color: var(--mono-ui--color-white);
   background-color: var(--mono-ui--color-500);
+  border: 1px solid var(--mono-ui--color-500);
 
   &:hover {
-    color: var(--mono-ui--color-500);
-    background-color: var(--mono-ui--white);
+    border-color: var(--mono-ui--color-400);
+    background-color: var(--mono-ui--color-400);
   }
   &:active {
     color: var(--mono-ui--color-500);
-    background-color: var(--mono-ui--color-200);
+    background-color: var(--mono-ui--color-white);
   }
 }
 
 .mono-ui__button--outline {
   color: var(--mono-ui--color-500);
   background-color: var(--mono-ui--color-white);
+  border: 1px solid var(--mono-ui--color-500);
 
   &:hover {
     color: var(--mono-ui--color-white);
     background-color: var(--mono-ui--color-500);
   }
   &:active {
-    color: var(--mono-ui--color-white);
-    background-color: var(--mono-ui--color-400);
-    border-color: var(--mono-ui--color-400);
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-white);
+    border: 1px solid var(--mono-ui--color-500);
+  }
+}
+
+.mono-ui__button--light {
+  color: var(--mono-ui--color-500);
+  background-color: var(--mono-ui--color-200);
+  border: 1px solid var(--mono-ui--color-200);
+
+  &:hover {
+    border-color: var(--mono-ui--color-300);
+    background-color: var(--mono-ui--color-300);
+  }
+  &:active {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-white);
   }
 }

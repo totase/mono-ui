@@ -1,18 +1,30 @@
 import { ButtonHTMLAttributes } from 'react';
 import cx from 'clsx';
 
+import { Appearance } from '@/types';
+
 import './styles.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   loading?: boolean;
   outline?: boolean;
+  appearance?: Appearance;
 }
 
-const Button = ({ children, onClick, disabled, className, outline = false, loading = false, ...rest }: ButtonProps) => {
+const Button = ({
+  children,
+  onClick,
+  disabled,
+  className,
+  appearance = 'default',
+  loading = false,
+  ...rest
+}: ButtonProps) => {
   const classNames = cx('mono-ui__button', className, {
-    'mono-ui__button--default': !outline,
-    'mono-ui__button--outline': outline,
+    'mono-ui__button--default': appearance === 'default',
+    'mono-ui__button--outline': appearance === 'outline',
+    'mono-ui__button--light': appearance === 'light',
     'mono-ui__button--loading': loading,
   });
 
