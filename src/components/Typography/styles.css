@@ -21,10 +21,8 @@
 }
 
 p.mono-ui__typography,
-a.mono-ui__typography,
 span.mono-ui__typography,
 button.mono-ui__typography,
-label.mono-ui__typography,
 h6.mono-ui__typography {
   &:not(.mono-ui__typography--tiny) {
     font-size: var(--mono-ui--font-size-base);
