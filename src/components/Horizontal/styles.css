@@ -1,0 +1,19 @@
+.mono-ui__horizontal {
+  border: 0;
+  margin-block: 0;
+
+  height: 1px;
+  width: 100%;
+
+  background-color: var(--mono-ui--color-500);
+}
+
+.mono-ui__horizontal--sm {
+  margin: var(--mono-ui--spacing-sm) 0;
+}
+.mono-ui__horizontal--md {
+  margin: var(--mono-ui--spacing-md) 0;
+}
+.mono-ui__horizontal--lg {
+  margin: var(--mono-ui--spacing-lg) 0;
+}
