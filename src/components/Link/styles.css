@@ -1,0 +1,15 @@
+a {
+  color: var(--mono-ui--color-500);
+  font-size: var(--mono-ui--font-size-base);
+
+  transition: color 100ms ease;
+
+  &:hover {
+    color: var(--mono-ui--color-400);
+    text-decoration-color: var(--mono-ui--color-400);
+  }
+  &:active {
+    color: var(--mono-ui--color-300);
+    text-decoration-color: var(--mono-ui--color-300);
+  }
+}
