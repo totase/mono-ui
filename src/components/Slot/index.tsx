@@ -1,7 +1,7 @@
 import { cloneElement, HTMLAttributes, isValidElement, ReactNode, RefObject } from 'react';
 
 export interface SlotProps extends HTMLAttributes<HTMLElement> {
-  children?: ReactNode;
+  children: ReactNode;
   ref: RefObject<HTMLElement | null>;
 }
 
