@@ -6,7 +6,7 @@
   }
 
   &.mono-ui__typography--light {
-    color: var(--mono-ui--color-400);
+    color: var(--mono-ui--color-100);
   }
 
   &.mono-ui__typography--regular {
