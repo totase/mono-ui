@@ -1,16 +1,22 @@
 import { cloneElement, HTMLAttributes, isValidElement, ReactNode, RefObject } from 'react';
+import cx from 'clsx';
 
 export interface SlotProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
   ref: RefObject<HTMLElement | null>;
 }
 
-const Slot = ({ children, ...rest }: SlotProps) => {
+const Slot = ({ children, className, ...rest }: SlotProps) => {
   if (isValidElement(children)) {
-    const props = { ...rest, ...(children.props as Record<string, unknown>) };
+    const props = children.props as Record<string, unknown>;
+
+    const childrenClassName = props?.className ?? '';
+    const classNames = cx(className, childrenClassName);
+
+    const mergedProps = { ...rest, ...(children.props as Record<string, unknown>), className: classNames };
 
     return cloneElement(children, {
-      ...props,
+      ...mergedProps,
     });
   }
 
