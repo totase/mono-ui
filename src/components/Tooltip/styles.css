@@ -17,7 +17,7 @@
   pointer-events: none;
 
   display: flex;
-  padding: 0 var(--mono-ui--spacing-sm);
+  padding: 2px var(--mono-ui--spacing-sm);
   border-radius: var(--mono-ui--radius-sm);
 
   background-color: var(--mono-ui--color-500);
@@ -26,4 +26,16 @@
 }
 
 .mono-ui__tooltip__arrow {
+  width: 0px;
+  height: 0px;
+
+  position: absolute;
+  left: 50%;
+  top: 100%;
+
+  border-right: solid 5px transparent;
+  border-left: solid 5px transparent;
+  border-top: solid 5px var(--mono-ui--color-500);
+
+  transform: translateX(-50%);
 }

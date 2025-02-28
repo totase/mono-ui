@@ -25,10 +25,18 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', hide);
+    function hideOnEvent() {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+      setState({ ...state, active: false });
+    }
+
+    window.addEventListener('scroll', hideOnEvent);
+    window.addEventListener('resize', hideOnEvent);
 
     return () => {
-      window.addEventListener('scroll', hide);
+      window.addEventListener('scroll', hideOnEvent);
+      window.addEventListener('resize', hideOnEvent);
 
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
@@ -43,13 +51,13 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
         width: 0,
       };
 
-      setState((prev) => {
-        const posX = x + triggerWidth / 2 - tooltipWidth / 2;
-        const posY = y - tooltipHeight;
+      const posX = x + triggerWidth / 2 - tooltipWidth / 2;
+      // Subtract 5 (arrow height) to avoid overlap
+      const posY = y - tooltipHeight - 5;
 
-        return { ...prev, position: { x: posX, y: posY } };
-      });
+      setState({ ...state, position: { x: posX, y: posY } });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.active]);
 
   const show = () => {
@@ -71,23 +79,25 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
         onMouseEnter={show}
         onMouseLeave={hide}
         className="mono-ui__tooltip__trigger"
-        aria-describedby="test"
+        // aria-describedby="tooltip"
       >
         {children}
       </Slot>
 
       {state.active && (
         <div
-          id="test"
+          // id="tooltip" // Todo: Add hook to generate unique id
+          role="tooltip"
           ref={tooltipRef}
           className="mono-ui__tooltip"
           style={{ top: state.position.y, left: state.position.x }}
           {...rest}
         >
-          <div className="mono-ui__tooltip__arrow" />
           <Typography as="span" light tiny>
             {content}
           </Typography>
+
+          <div className="mono-ui__tooltip__arrow" />
         </div>
       )}
     </>
