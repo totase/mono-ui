@@ -8,6 +8,7 @@ export { default as Link } from './Link';
 export { default as Radio } from './Radio';
 export { default as Select } from './Select';
 export { default as Slot } from './Slot';
+export { default as Tabs } from './Tabs';
 export { default as Toggle } from './Toggle';
 export { default as Tooltip } from './Tooltip';
 export { default as Typography } from './Typography';

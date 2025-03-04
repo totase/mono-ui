@@ -1,0 +1,29 @@
+.mono-ui-tabs__tabslist {
+  display: flex;
+
+  border-bottom: 1px solid var(--mono-ui--color-200);
+}
+
+.mono-ui-tabs__tab-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  margin-bottom: -1px;
+
+  display: inline-flex;
+  border-bottom: 2px solid transparent;
+
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
+
+  transition:
+    background-color 150ms ease-in-out,
+    border-color 150ms ease-in-out;
+
+  &:not(.mono-ui-tabs__tab-button--active):hover {
+    border-color: var(--mono-ui--color-300);
+  }
+}
+.mono-ui-tabs__tab-button--active {
+  border-color: var(--mono-ui--color-500);
+}
