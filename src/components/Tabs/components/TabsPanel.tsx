@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { makeTabButtonId } from '../utils';
+import { makeTabButtonId, makeTabPanelId } from '../utils';
 
 export interface TabsPanelProps extends HTMLAttributes<HTMLDivElement> {
   value: string;
@@ -7,13 +7,14 @@ export interface TabsPanelProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const TabsPanel = ({ active, value, children, ...rest }: TabsPanelProps) => {
+  const id = makeTabPanelId(value);
   const labelledBy = makeTabButtonId(value);
 
   return (
     <div
       {...rest}
+      id={id}
       hidden={!active}
-      tabIndex={0}
       data-state={active ? 'active' : 'inactive'}
       role="tabpanel"
       aria-labelledby={labelledBy}

@@ -1,4 +1,5 @@
 import { ReactNode, useState } from 'react';
+
 import TabButton, { TabButtonProps } from './components/TabButton';
 import TabsPanel from './components/TabsPanel';
 
@@ -13,7 +14,7 @@ export interface TabsProps {
 }
 
 const Tabs = ({ tabs, panels }: TabsProps) => {
-  const [active, setActive] = useState<TabButtonProps['value']>(tabs[0].value);
+  const [selected, setSelected] = useState<string>(tabs[0].value);
 
   return (
     <div className="mono-ui-tabs">
@@ -25,15 +26,15 @@ const Tabs = ({ tabs, panels }: TabsProps) => {
               {...rest}
               label={label}
               value={value}
-              onClick={() => setActive(value)}
-              active={active === value}
+              onClick={() => setSelected(value)}
+              active={selected === value}
             />
           );
         })}
       </div>
 
       {panels.map(({ value, ...rest }) => (
-        <TabsPanel key={`tab-panel-${value}`} {...rest} value={value} active={active === value} />
+        <TabsPanel key={`tab-panel-${value}`} {...rest} value={value} active={selected === value} />
       ))}
     </div>
   );
