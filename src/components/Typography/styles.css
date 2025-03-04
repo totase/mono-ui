@@ -1,73 +1,73 @@
-.mono-ui__typography {
+.mono-ui-typography {
   margin: 0;
 
-  &:not(.mono-ui__typography--light) {
+  &:not(.mono-ui-typography--light) {
     color: var(--mono-ui--color-500);
   }
 
-  &.mono-ui__typography--light {
+  &.mono-ui-typography--light {
     color: var(--mono-ui--color-100);
   }
 
-  &.mono-ui__typography--regular {
+  &.mono-ui-typography--regular {
     font-weight: 400;
   }
-  &.mono-ui__typography--medium {
+  &.mono-ui-typography--medium {
     font-weight: 500;
   }
-  &.mono-ui__typography--bold {
+  &.mono-ui-typography--bold {
     font-weight: 700;
   }
 }
 
-p.mono-ui__typography,
-span.mono-ui__typography,
-button.mono-ui__typography,
-h6.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+p.mono-ui-typography,
+span.mono-ui-typography,
+button.mono-ui-typography,
+h6.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-base);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-small);
   }
 }
-h1.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+h1.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-h1);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-h2);
   }
 }
-h2.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+h2.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-h2);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-h3);
   }
 }
-h3.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+h3.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-h3);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-h4);
   }
 }
-h4.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+h4.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-h4);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-h5);
   }
 }
-h5.mono-ui__typography {
-  &:not(.mono-ui__typography--tiny) {
+h5.mono-ui-typography {
+  &:not(.mono-ui-typography--tiny) {
     font-size: var(--mono-ui--font-size-h5);
   }
-  &.mono-ui__typography--tiny {
+  &.mono-ui-typography--tiny {
     font-size: var(--mono-ui--font-size-base);
   }
 }

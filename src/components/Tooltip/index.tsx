@@ -78,7 +78,7 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
         ref={triggerRef}
         onMouseEnter={show}
         onMouseLeave={hide}
-        className="mono-ui__tooltip__trigger"
+        className="mono-ui-tooltip__trigger"
         // aria-describedby="tooltip"
       >
         {children}
@@ -89,7 +89,7 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
           // id="tooltip" // Todo: Add hook to generate unique id
           role="tooltip"
           ref={tooltipRef}
-          className="mono-ui__tooltip"
+          className="mono-ui-tooltip"
           style={{ top: state.position.y, left: state.position.x }}
           {...rest}
         >
@@ -97,7 +97,7 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
             {content}
           </Typography>
 
-          <div className="mono-ui__tooltip__arrow" />
+          <div className="mono-ui-tooltip__arrow" />
         </div>
       )}
     </>

@@ -12,12 +12,12 @@ export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
 }
 
 const Toggle = ({ id, label, disabled, description, ...rest }: ToggleProps) => {
-  const classNames = cx('mono-ui__toggle', {
-    'mono-ui__toggle--disabled': disabled,
+  const classNames = cx('mono-ui-toggle', {
+    'mono-ui-toggle--disabled': disabled,
   });
 
   return (
-    <div className="mono-ui__toggle__container">
+    <div className="mono-ui-toggle__container">
       <span className={classNames} tabIndex={0}>
         <input
           id={id}
@@ -27,7 +27,7 @@ const Toggle = ({ id, label, disabled, description, ...rest }: ToggleProps) => {
           {...rest}
         />
 
-        <span className="mono-ui__toggle__thumb" />
+        <span className="mono-ui-toggle__thumb" />
       </span>
 
       <Label id={id} label={label} description={description} />

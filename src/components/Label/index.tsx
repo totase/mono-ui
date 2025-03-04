@@ -12,7 +12,7 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
 
 const Label = ({ id, label, description, ...rest }: LabelProps) => {
   return (
-    <label className="mono-ui__label" htmlFor={id} {...rest}>
+    <label className="mono-ui-label" htmlFor={id} {...rest}>
       {label}
 
       {description && (

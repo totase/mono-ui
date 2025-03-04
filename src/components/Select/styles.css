@@ -1,10 +1,10 @@
-.mono-ui__select__container {
+.mono-ui-select__container {
   display: flex;
   flex-direction: column;
   gap: var(--mono-ui--spacing-xs);
 }
 
-.mono-ui__select {
+.mono-ui-select {
   border-radius: var(--mono-ui--radius-sm);
 
   border: 1px solid var(--mono-ui--color-500);
@@ -24,12 +24,12 @@
     border-color 100ms ease-in-out;
 }
 
-.mono-ui__select--readOnly,
-.mono-ui__select--disabled {
+.mono-ui-select--readOnly,
+.mono-ui-select--disabled {
   cursor: not-allowed;
   background-color: var(--mono-ui--color-100);
 }
 
-.mono-ui__select__placeholder {
+.mono-ui-select__placeholder {
   display: none;
 }

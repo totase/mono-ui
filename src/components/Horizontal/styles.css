@@ -1,4 +1,4 @@
-.mono-ui__horizontal {
+.mono-ui-horizontal {
   border: 0;
   margin-block: 0;
 
@@ -8,12 +8,12 @@
   background-color: var(--mono-ui--color-500);
 }
 
-.mono-ui__horizontal--sm {
+.mono-ui-horizontal--small {
   margin: var(--mono-ui--spacing-sm) 0;
 }
-.mono-ui__horizontal--md {
+.mono-ui-horizontal--medium {
   margin: var(--mono-ui--spacing-md) 0;
 }
-.mono-ui__horizontal--lg {
+.mono-ui-horizontal--large {
   margin: var(--mono-ui--spacing-lg) 0;
 }

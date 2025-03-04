@@ -12,12 +12,12 @@ export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
 }
 
 const Radio = ({ id, label, disabled, description, ...rest }: RadioProps) => {
-  const classNames = cx('mono-ui__radio', {
-    'mono-ui__radio--disabled': disabled,
+  const classNames = cx('mono-ui-radio', {
+    'mono-ui-radio--disabled': disabled,
   });
 
   return (
-    <div className="mono-ui__radio__container">
+    <div className="mono-ui-radio__container">
       <span className={classNames} tabIndex={0}>
         <input
           id={id}

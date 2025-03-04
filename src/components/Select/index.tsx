@@ -15,16 +15,16 @@ export interface SelectProps extends Omit<InputHTMLAttributes<HTMLSelectElement>
 }
 
 const Select = ({ id, label, disabled, options, placeholder = 'Select a value', ...rest }: SelectProps) => {
-  const classNames = cx('mono-ui__select', {
-    'mono-ui__select--disabled': disabled,
+  const classNames = cx('mono-ui-select', {
+    'mono-ui-select--disabled': disabled,
   });
 
   return (
-    <div className="mono-ui__select__container">
+    <div className="mono-ui-select__container">
       <label htmlFor={id}>{label}</label>
 
       <select id={id} disabled={disabled} className={classNames} {...rest}>
-        <option value={undefined} className="mono-ui__select__placeholder">
+        <option value={undefined} className="mono-ui-select__placeholder">
           {placeholder}
         </option>
 

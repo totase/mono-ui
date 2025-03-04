@@ -1,4 +1,4 @@
-@keyframes mono-ui__tooltip-fade-in {
+@keyframes mono-ui-tooltip-fade-in {
   from {
     opacity: 0;
   }
@@ -8,11 +8,11 @@
   }
 }
 
-.mono-ui__tooltip__trigger {
+.mono-ui-tooltip__trigger {
   cursor: help;
 }
 
-.mono-ui__tooltip {
+.mono-ui-tooltip {
   position: fixed;
   pointer-events: none;
 
@@ -22,10 +22,10 @@
 
   background-color: var(--mono-ui--color-500);
 
-  animation: mono-ui__tooltip-fade-in 150ms ease-in forwards;
+  animation: mono-ui-tooltip-fade-in 150ms ease-in forwards;
 }
 
-.mono-ui__tooltip__arrow {
+.mono-ui-tooltip__arrow {
   width: 0px;
   height: 0px;
 

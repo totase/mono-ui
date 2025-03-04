@@ -12,12 +12,12 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
 }
 
 const Checkbox = ({ id, label, disabled, description, ...rest }: CheckboxProps) => {
-  const classNames = cx('mono-ui__checkbox', {
-    'mono-ui__checkbox--disabled': disabled,
+  const classNames = cx('mono-ui-checkbox', {
+    'mono-ui-checkbox--disabled': disabled,
   });
 
   return (
-    <div className="mono-ui__checkbox__container">
+    <div className="mono-ui-checkbox__container">
       <span className={classNames} tabIndex={0}>
         <input
           id={id}

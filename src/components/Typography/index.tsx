@@ -20,12 +20,12 @@ const Typography = ({
   weight = Component === 'p' || Component === 'span' ? 'regular' : 'bold',
   ...rest
 }: TypographyProps) => {
-  const classNames = cx('mono-ui__typography', className, {
-    'mono-ui__typography--light': light,
-    'mono-ui__typography--regular': weight === 'regular',
-    'mono-ui__typography--medium': weight === 'medium',
-    'mono-ui__typography--bold': weight === 'bold',
-    'mono-ui__typography--tiny': tiny,
+  const classNames = cx('mono-ui-typography', className, {
+    'mono-ui-typography--light': light,
+    'mono-ui-typography--regular': weight === 'regular',
+    'mono-ui-typography--medium': weight === 'medium',
+    'mono-ui-typography--bold': weight === 'bold',
+    'mono-ui-typography--tiny': tiny,
   });
 
   return (

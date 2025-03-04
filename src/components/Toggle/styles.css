@@ -1,10 +1,10 @@
-.mono-ui__toggle__container {
+.mono-ui-toggle__container {
   display: flex;
   align-items: center;
   gap: var(--mono-ui--spacing-sm);
 }
 
-.mono-ui__toggle {
+.mono-ui-toggle {
   position: relative;
 
   width: 42px;
@@ -19,7 +19,7 @@
   &:not(:has(input[type='checkbox']:checked)) {
     background-color: var(--mono-ui--color-300);
 
-    & .mono-ui__toggle__thumb {
+    & .mono-ui-toggle__thumb {
       transform: translateY(-50%) translateX(4px);
     }
   }
@@ -27,7 +27,7 @@
   &:has(input[type='checkbox']:checked) {
     background-color: var(--mono-ui--color-500);
 
-    & .mono-ui__toggle__thumb {
+    & .mono-ui-toggle__thumb {
       transform: translateY(-50%) translateX(22px);
     }
   }
@@ -49,7 +49,7 @@
   }
 }
 
-.mono-ui__toggle__thumb {
+.mono-ui-toggle__thumb {
   top: 50%;
   position: absolute;
   pointer-events: none;

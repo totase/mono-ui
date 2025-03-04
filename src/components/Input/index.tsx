@@ -10,13 +10,13 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = ({ id, label, className, type = 'text', disabled, readOnly, ...rest }: InputProps) => {
-  const classNames = cx('mono-ui__input', className, {
-    'mono-ui__input--disabled': disabled,
-    'mono-ui__input--readOnly': readOnly,
+  const classNames = cx('mono-ui-input', className, {
+    'mono-ui-input--disabled': disabled,
+    'mono-ui-input--readOnly': readOnly,
   });
 
   return (
-    <div className="mono-ui__input__container">
+    <div className="mono-ui-input__container">
       <label htmlFor={id}>{label}</label>
       <input id={id} type={type} className={classNames} disabled={disabled} readOnly={readOnly} {...rest} />
     </div>

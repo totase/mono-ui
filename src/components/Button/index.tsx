@@ -21,11 +21,11 @@ const Button = ({
   loading = false,
   ...rest
 }: ButtonProps) => {
-  const classNames = cx('mono-ui__button', className, {
-    'mono-ui__button--default': appearance === 'default',
-    'mono-ui__button--outline': appearance === 'outline',
-    'mono-ui__button--light': appearance === 'light',
-    'mono-ui__button--loading': loading,
+  const classNames = cx('mono-ui-button', className, {
+    'mono-ui-button--default': appearance === 'default',
+    'mono-ui-button--outline': appearance === 'outline',
+    'mono-ui-button--light': appearance === 'light',
+    'mono-ui-button--loading': loading,
   });
 
   return (

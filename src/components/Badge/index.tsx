@@ -12,11 +12,11 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const Badge = ({ children, appearance = 'default', tiny = false, ...rest }: BadgeProps) => {
-  const classNames = cx('mono-ui__badge', {
-    'mono-ui__badge--default': appearance === 'default',
-    'mono-ui__badge--outline': appearance === 'outline',
-    'mono-ui__badge--light': appearance === 'light',
-    'mono-ui__badge--tiny': tiny,
+  const classNames = cx('mono-ui-badge', {
+    'mono-ui-badge--default': appearance === 'default',
+    'mono-ui-badge--outline': appearance === 'outline',
+    'mono-ui-badge--light': appearance === 'light',
+    'mono-ui-badge--tiny': tiny,
   });
 
   return (

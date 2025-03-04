@@ -1,10 +1,10 @@
-.mono-ui__radio__container {
+.mono-ui-radio__container {
   display: flex;
   align-items: center;
   gap: var(--mono-ui--spacing-sm);
 }
 
-.mono-ui__radio {
+.mono-ui-radio {
   position: relative;
 
   width: 16px;

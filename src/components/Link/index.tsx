@@ -8,7 +8,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 const Link = ({ href, children, className, ...rest }: LinkProps) => {
-  const classNames = cx('mono-ui__link', className);
+  const classNames = cx('mono-ui-link', className);
 
   return (
     <a href={href} className={classNames} {...rest}>
