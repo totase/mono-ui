@@ -1,8 +1,7 @@
-import { cloneElement, HTMLAttributes, isValidElement, ReactNode, RefObject } from 'react';
+import { cloneElement, HTMLAttributes, isValidElement, RefObject } from 'react';
 import cx from 'clsx';
 
 export interface SlotProps extends HTMLAttributes<HTMLElement> {
-  children: ReactNode;
   ref: RefObject<HTMLElement | null>;
 }
 
