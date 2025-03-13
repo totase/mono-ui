@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 
 import TabButton, { TabButtonProps } from './components/TabButton';
-import TabsPanel from './components/TabsPanel';
+import TabPanel from './components/TabPanel';
 
 import './styles.css';
 
@@ -34,7 +34,7 @@ const Tabs = ({ tabs, panels }: TabsProps) => {
       </div>
 
       {panels.map(({ value, ...rest }) => (
-        <TabsPanel key={`tab-panel-${value}`} {...rest} value={value} active={selected === value} />
+        <TabPanel key={`tab-panel-${value}`} {...rest} value={value} active={selected === value} />
       ))}
     </div>
   );

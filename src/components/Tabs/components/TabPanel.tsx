@@ -1,12 +1,12 @@
 import { HTMLAttributes } from 'react';
 import { makeTabButtonId, makeTabPanelId } from '../utils';
 
-export interface TabsPanelProps extends HTMLAttributes<HTMLDivElement> {
+export interface TabPanelProps extends HTMLAttributes<HTMLDivElement> {
   value: string;
   active: boolean;
 }
 
-const TabsPanel = ({ active, value, children, ...rest }: TabsPanelProps) => {
+const TabPanel = ({ active, value, children, ...rest }: TabPanelProps) => {
   const id = makeTabPanelId(value);
   const labelledBy = makeTabButtonId(value);
 
@@ -24,4 +24,4 @@ const TabsPanel = ({ active, value, children, ...rest }: TabsPanelProps) => {
   );
 };
 
-export default TabsPanel;
+export default TabPanel;
