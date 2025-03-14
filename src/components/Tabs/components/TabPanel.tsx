@@ -11,14 +11,7 @@ const TabPanel = ({ active, value, children, ...rest }: TabPanelProps) => {
   const labelledBy = makeTabButtonId(value);
 
   return (
-    <div
-      {...rest}
-      id={id}
-      hidden={!active}
-      data-state={active ? 'active' : 'inactive'}
-      role="tabpanel"
-      aria-labelledby={labelledBy}
-    >
+    <div {...rest} id={id} hidden={!active} role="tabpanel" aria-labelledby={labelledBy}>
       {children}
     </div>
   );

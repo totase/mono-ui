@@ -16,14 +16,13 @@
 
   padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
 
-  transition:
-    background-color 150ms ease-in-out,
-    border-color 150ms ease-in-out;
+  transition: border-color 150ms ease-in-out;
 
   &:not(.mono-ui-tabs__tab-button--active):hover {
     border-color: var(--mono-ui--color-300);
   }
 }
+
 .mono-ui-tabs__tab-button--active {
   border-color: var(--mono-ui--color-500);
 }
