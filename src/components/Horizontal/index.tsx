@@ -1,17 +1,17 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
+import { Size } from '@/types';
+
 import './styles.css';
 
 export interface HorizontalProps extends HTMLAttributes<HTMLHRElement> {
-  spacing?: 'sm' | 'md' | 'lg';
+  spacing?: Size;
 }
 
 const Horizontal = ({ spacing, ...rest }: HorizontalProps) => {
   const classNames = cx('mono-ui-horizontal', {
-    'mono-ui-horizontal--small': spacing === 'sm',
-    'mono-ui-horizontal--medium': spacing === 'md',
-    'mono-ui-horizontal--large': spacing === 'lg',
+    [`mono-ui-horizontal--${spacing}`]: !spacing,
   });
 
   return <hr className={classNames} {...rest} />;
