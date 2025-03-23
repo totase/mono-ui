@@ -8,11 +8,11 @@ export interface TabButtonProps extends Exclude<ButtonHTMLAttributes<HTMLButtonE
   active: boolean;
 }
 
-const TabButton = ({ label, value, active, ...rest }: TabButtonProps) => {
+const TabButton = ({ label, value, className, active, ...rest }: TabButtonProps) => {
   const id = makeTabButtonId(value);
   const controlsId = makeTabPanelId(value);
 
-  const classNames = cx('mono-ui-tabs__tab-button', {
+  const classNames = cx('mono-ui-tabs__tab-button', className, {
     'mono-ui-tabs__tab-button--active': active,
   });
 

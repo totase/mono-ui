@@ -11,8 +11,8 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   description?: string;
 }
 
-const Checkbox = ({ id, label, disabled, description, ...rest }: CheckboxProps) => {
-  const classNames = cx('mono-ui-checkbox', {
+const Checkbox = ({ id, label, className, disabled, description, ...rest }: CheckboxProps) => {
+  const classNames = cx('mono-ui-checkbox', className, {
     'mono-ui-checkbox--disabled': disabled,
   });
 

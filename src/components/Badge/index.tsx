@@ -11,8 +11,8 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   appearance?: Appearance;
 }
 
-const Badge = ({ children, appearance = 'default', tiny = false, ...rest }: BadgeProps) => {
-  const classNames = cx('mono-ui-badge', {
+const Badge = ({ children, className, appearance = 'default', tiny = false, ...rest }: BadgeProps) => {
+  const classNames = cx('mono-ui-badge', className, {
     [`mono-ui-badge--${appearance}`]: appearance,
     'mono-ui-badge--tiny': tiny,
   });

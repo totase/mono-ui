@@ -14,8 +14,8 @@ export interface SelectProps extends Omit<InputHTMLAttributes<HTMLSelectElement>
   options: SelectOptionType[];
 }
 
-const Select = ({ id, label, disabled, options, placeholder = 'Select a value', ...rest }: SelectProps) => {
-  const classNames = cx('mono-ui-select', {
+const Select = ({ id, label, disabled, className, options, placeholder = 'Select a value', ...rest }: SelectProps) => {
+  const classNames = cx('mono-ui-select', className, {
     'mono-ui-select--disabled': disabled,
   });
 

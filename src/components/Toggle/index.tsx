@@ -11,8 +11,8 @@ export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
   description?: string;
 }
 
-const Toggle = ({ id, label, disabled, description, ...rest }: ToggleProps) => {
-  const classNames = cx('mono-ui-toggle', {
+const Toggle = ({ id, label, disabled, className, description, ...rest }: ToggleProps) => {
+  const classNames = cx('mono-ui-toggle', className, {
     'mono-ui-toggle--disabled': disabled,
   });
 

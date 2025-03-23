@@ -1,4 +1,5 @@
 import { LabelHTMLAttributes } from 'react';
+import cx from 'clsx';
 
 import { Typography } from '..';
 
@@ -10,9 +11,11 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   description?: string;
 }
 
-const Label = ({ id, label, description, ...rest }: LabelProps) => {
+const Label = ({ id, label, className, description, ...rest }: LabelProps) => {
+  const classNames = cx('mono-ui-label', className);
+
   return (
-    <label className="mono-ui-label" htmlFor={id} {...rest}>
+    <label className={classNames} htmlFor={id} {...rest}>
       {label}
 
       {description && (

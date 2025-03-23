@@ -1,4 +1,5 @@
 import { HTMLAttributes, ReactNode, useEffect, useRef, useState } from 'react';
+import cx from 'clsx';
 
 import { Position } from '@/types';
 import { Slot, Typography } from '..';
@@ -17,12 +18,14 @@ interface TooltipState {
 
 const HIDE_TIMEOUT = 150;
 
-const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
+const Tooltip = ({ content, className, children, ...rest }: TooltipProps) => {
   const [state, setState] = useState<TooltipState>({ active: false, position: { x: 0, y: 0 } });
 
   const triggerRef = useRef<HTMLElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const classNames = cx('mono-ui-tooltip', className);
 
   useEffect(() => {
     function hideOnEvent() {
@@ -89,7 +92,7 @@ const Tooltip = ({ content, children, ...rest }: TooltipProps) => {
           // id="tooltip" // Todo: Add hook to generate unique id
           role="tooltip"
           ref={tooltipRef}
-          className="mono-ui-tooltip"
+          className={classNames}
           style={{ top: state.position.y, left: state.position.x }}
           {...rest}
         >

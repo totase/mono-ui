@@ -11,8 +11,8 @@ export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
   description?: string;
 }
 
-const Radio = ({ id, label, disabled, description, ...rest }: RadioProps) => {
-  const classNames = cx('mono-ui-radio', {
+const Radio = ({ id, label, disabled, className, description, ...rest }: RadioProps) => {
+  const classNames = cx('mono-ui-radio', className, {
     'mono-ui-radio--disabled': disabled,
   });
 

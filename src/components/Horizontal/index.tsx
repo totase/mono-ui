@@ -9,8 +9,8 @@ export interface HorizontalProps extends HTMLAttributes<HTMLHRElement> {
   spacing?: Size;
 }
 
-const Horizontal = ({ spacing, ...rest }: HorizontalProps) => {
-  const classNames = cx('mono-ui-horizontal', {
+const Horizontal = ({ spacing, className, ...rest }: HorizontalProps) => {
+  const classNames = cx('mono-ui-horizontal', className, {
     [`mono-ui-horizontal--${spacing}`]: !spacing,
   });
 
