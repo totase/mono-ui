@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, MouseEvent } from 'react';
 import cx from 'clsx';
 
 import { Appearance } from '@/types';
@@ -6,7 +6,7 @@ import { Appearance } from '@/types';
 import './styles.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   loading?: boolean;
   outline?: boolean;
   appearance?: Appearance;
