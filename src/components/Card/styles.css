@@ -1,0 +1,68 @@
+.mono-ui-card--padding-sm {
+  padding: var(--mono-ui--spacing-sm);
+}
+.mono-ui-card--padding-md {
+  padding: var(--mono-ui--spacing-md);
+}
+.mono-ui-card--padding-lg {
+  padding: var(--mono-ui--spacing-lg);
+}
+
+.mono-ui-card--panel {
+  border: 1px solid transparent;
+}
+
+.mono-ui-card--variant-0 {
+  background-color: var(--mono-ui--color-white);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-200);
+  }
+}
+.mono-ui-card--variant-100 {
+  background-color: var(--mono-ui--color-100);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-200);
+  }
+}
+.mono-ui-card--variant-200 {
+  background-color: var(--mono-ui--color-200);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-300);
+  }
+}
+.mono-ui-card--variant-300 {
+  background-color: var(--mono-ui--color-300);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-400);
+  }
+}
+.mono-ui-card--variant-400 {
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-400);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-500);
+  }
+}
+.mono-ui-card--variant-500 {
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-500);
+
+  &.mono-ui-card--panel {
+    border-color: var(--mono-ui--color-400);
+  }
+}
+
+.mono-ui-card--radius-sm {
+  border-radius: var(--mono-ui--radius-sm);
+}
+.mono-ui-card--radius-md {
+  border-radius: var(--mono-ui--radius-md);
+}
+.mono-ui-card--radius-lg {
+  border-radius: var(--mono-ui--radius-lg);
+}
