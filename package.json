@@ -3,6 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "source": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/mono-ui.umd.cjs",
+  "module": "./dist/mono-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mono-ui.js",
+      "require": "./dist/mono-ui.umd.cjs"
+    },
+    "./style.css": "./dist/mono-ui.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && tsc -b && vite build",
@@ -28,5 +41,9 @@
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.27.0",
     "vite": "^6.2.2"
+  },
+  "author": {
+    "name": "Tommy Sevaldsen",
+    "url": "https://tommysevaldsen.no"
   }
 }
