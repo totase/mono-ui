@@ -2,16 +2,19 @@
   line-height: 1;
 
   border-radius: var(--mono-ui--radius-rounded);
-
-  &:not(.mono-ui-badge--tiny) {
-    font-size: var(--mono-ui--font-size-base);
-    padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-md);
-  }
 }
 
-.mono-ui-badge--tiny {
+.mono-ui-badge--sm {
   font-size: var(--mono-ui--font-size-small);
   padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+}
+.mono-ui-badge--md {
+  font-size: var(--mono-ui--font-size-small);
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
+}
+.mono-ui-badge--lg {
+  font-size: var(--mono-ui--font-size-base);
+  padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-md);
 }
 
 .mono-ui-badge--default {

@@ -1,21 +1,18 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Appearance } from '@/types';
+import { Appearance, Size } from '@/types';
 
 import './styles.css';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: string;
-  tiny?: boolean;
+  size?: Size;
   appearance?: Appearance;
 }
 
-const Badge = ({ children, className, appearance = 'default', tiny = false, ...rest }: BadgeProps) => {
-  const classNames = cx('mono-ui-badge', className, {
-    [`mono-ui-badge--${appearance}`]: appearance,
-    'mono-ui-badge--tiny': tiny,
-  });
+const Badge = ({ children, className, appearance = 'default', size = 'md', ...rest }: BadgeProps) => {
+  const classNames = cx('mono-ui-badge', `mono-ui-badge--${size}`, `mono-ui-badge--${appearance}`, className);
 
   return (
     <span className={classNames} {...rest}>
