@@ -23,6 +23,7 @@ const Button = ({
 }: ButtonProps) => {
   const classNames = cx('mono-ui-button', className, {
     [`mono-ui-button--${appearance}`]: appearance,
+    'mono-ui-button--disabled': disabled || loading,
     'mono-ui-button--loading': loading,
   });
 

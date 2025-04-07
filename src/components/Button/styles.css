@@ -10,16 +10,29 @@
     border-color 150ms ease-in-out;
 }
 
+.mono-ui-button--disabled {
+  opacity: 0.8;
+
+  &:not(.mono-ui-button--loading) {
+    cursor: not-allowed;
+  }
+}
+
+.mono-ui-button--loading {
+  cursor: progress;
+  opacity: 0.8;
+}
+
 .mono-ui-button--default {
   color: var(--mono-ui--color-white);
   background-color: var(--mono-ui--color-500);
   border: 1px solid var(--mono-ui--color-500);
 
-  &:hover {
+  &:not(.mono-ui-button--disabled):hover {
     border-color: var(--mono-ui--color-400);
     background-color: var(--mono-ui--color-400);
   }
-  &:active {
+  &:not(.mono-ui-button--disabled):active {
     color: var(--mono-ui--color-500);
     background-color: var(--mono-ui--color-white);
   }
@@ -30,11 +43,11 @@
   background-color: var(--mono-ui--color-white);
   border: 1px solid var(--mono-ui--color-500);
 
-  &:hover {
+  &:not(.mono-ui-button--disabled):hover {
     color: var(--mono-ui--color-white);
     background-color: var(--mono-ui--color-500);
   }
-  &:active {
+  &:not(.mono-ui-button--disabled):active {
     color: var(--mono-ui--color-500);
     background-color: var(--mono-ui--color-white);
     border: 1px solid var(--mono-ui--color-500);
@@ -46,11 +59,11 @@
   background-color: var(--mono-ui--color-200);
   border: 1px solid var(--mono-ui--color-200);
 
-  &:hover {
+  &:not(.mono-ui-button--disabled):hover {
     border-color: var(--mono-ui--color-300);
     background-color: var(--mono-ui--color-300);
   }
-  &:active {
+  &:not(.mono-ui-button--disabled):active {
     color: var(--mono-ui--color-500);
     background-color: var(--mono-ui--color-white);
   }
