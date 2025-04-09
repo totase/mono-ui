@@ -30,7 +30,7 @@ const BadgeGrid = (props: any) => (
 export const Controls: Story = {
   args: {
     size: 'md',
-    children: 'Default',
+    children: 'Badge',
   },
   argTypes: {
     size: {
