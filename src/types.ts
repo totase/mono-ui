@@ -8,3 +8,5 @@ export type Position = {
 export type Size = 'sm' | 'md' | 'lg';
 
 export type Weight = 'regular' | 'medium' | 'bold';
+
+export type Align = 'left' | 'center' | 'right';
