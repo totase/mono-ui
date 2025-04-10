@@ -12,23 +12,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: Appearance;
 }
 
-const Button = ({
-  children,
-  onClick,
-  disabled,
-  className,
-  appearance = 'default',
-  loading = false,
-  ...rest
-}: ButtonProps) => {
-  const classNames = cx('mono-ui-button', className, {
-    [`mono-ui-button--${appearance}`]: appearance,
+const Button = ({ children, disabled, className, appearance = 'default', loading = false, ...rest }: ButtonProps) => {
+  const classNames = cx('mono-ui-button', `mono-ui-button--${appearance}`, className, {
     'mono-ui-button--disabled': disabled || loading,
     'mono-ui-button--loading': loading,
   });
 
   return (
-    <button className={classNames} onClick={onClick} disabled={loading || disabled} {...rest}>
+    <button className={classNames} disabled={loading || disabled} {...rest}>
       {children}
     </button>
   );
