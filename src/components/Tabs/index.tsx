@@ -1,11 +1,12 @@
-import { ReactNode, useState } from 'react';
+import { HTMLAttributes, ReactNode, useState } from 'react';
+import cx from 'clsx';
 
 import TabButton, { TabButtonProps } from './components/TabButton';
 import TabPanel from './components/TabPanel';
 
 import './styles.css';
 
-export interface TabsProps {
+export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   tabs: Omit<TabButtonProps, 'active'>[];
   panels: {
     value: string;
@@ -13,11 +14,13 @@ export interface TabsProps {
   }[];
 }
 
-const Tabs = ({ tabs, panels }: TabsProps) => {
+const Tabs = ({ tabs, panels, className, ...rest }: TabsProps) => {
   const [selected, setSelected] = useState<string>(tabs[0].value);
 
+  const classNames = cx('mono-ui-tabs', className);
+
   return (
-    <div className="mono-ui-tabs">
+    <div className={classNames} {...rest}>
       <div className="mono-ui-tabs__tabslist" aria-orientation="horizontal" role="tablist">
         {tabs.map(({ label, value, ...rest }) => {
           return (

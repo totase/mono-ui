@@ -23,11 +23,9 @@ const Flex = ({
   wrap = true,
   ...rest
 }: FlexProps) => {
-  const classNames = cx('mono-ui-flex', className, {
+  const classNames = cx('mono-ui-flex', `mono-ui-flex--gap-${gap}`, `mono-ui-flex--direction-${direction}`, className, {
     [`mono-ui-flex--justify-${justify}`]: !!justify,
     [`mono-ui-flex--align-${align}`]: !!align,
-    [`mono-ui-flex--gap-${gap}`]: gap,
-    [`mono-ui-flex--direction-${direction}`]: direction,
     'mono-ui-flex--wrap': wrap,
   });
 

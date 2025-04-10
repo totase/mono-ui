@@ -11,7 +11,7 @@ export interface HorizontalProps extends HTMLAttributes<HTMLHRElement> {
 
 const Horizontal = ({ spacing, className, ...rest }: HorizontalProps) => {
   const classNames = cx('mono-ui-horizontal', className, {
-    [`mono-ui-horizontal--${spacing}`]: !spacing,
+    [`mono-ui-horizontal--${spacing}`]: !!spacing,
   });
 
   return <hr className={classNames} {...rest} />;

@@ -12,10 +12,9 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   panel?: boolean;
 }
 
-const Card = ({ className, children, padding, variant = '0', radius, panel = false, ...rest }: CardProps) => {
-  const classNames = cx('mono-ui-card', className, {
+const Card = ({ className, children, padding, radius, variant = '0', panel = false, ...rest }: CardProps) => {
+  const classNames = cx('mono-ui-card', `mono-ui-card--variant-${variant}`, className, {
     [`mono-ui-card--padding-${padding}`]: padding,
-    [`mono-ui-card--variant-${variant}`]: variant,
     [`mono-ui-card--radius-${radius}`]: radius,
     'mono-ui-card--panel': panel,
   });
