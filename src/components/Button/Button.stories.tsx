@@ -1,0 +1,40 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import Button from '.';
+import { Flex } from '..';
+
+const meta = {
+  title: 'Components/Button',
+  component: Button,
+} satisfies Meta<typeof Button>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ButtonGrid = (props: any) => (
+  <Flex>
+    <Button {...props} appearance="default">
+      Default
+    </Button>
+    <Button {...props} appearance="light">
+      Light
+    </Button>
+    <Button {...props} appearance="outline">
+      Outline
+    </Button>
+  </Flex>
+);
+
+export const Default: Omit<Story, 'args'> = {
+  render: () => <ButtonGrid />,
+};
+
+export const Disabled: Omit<Story, 'args'> = {
+  render: () => <ButtonGrid disabled />,
+};
+
+export const Loading: Omit<Story, 'args'> = {
+  render: () => <ButtonGrid loading />,
+};
