@@ -29,14 +29,9 @@ const BadgeGrid = (props: any) => (
 
 export const Controls: Story = {
   args: {
-    size: 'md',
     children: 'Badge',
   },
   argTypes: {
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: { type: 'radio' },
-    },
     appearance: {
       options: ['default', 'light', 'outline'],
       control: { type: 'radio' },
@@ -45,17 +40,9 @@ export const Controls: Story = {
       control: { type: 'text' },
     },
   },
-  render: (args) => <Badge size={args.size}>{args.children}</Badge>,
+  render: (args) => <Badge>{args.children}</Badge>,
 };
 
-export const Small: Omit<Story, 'args'> = {
-  render: () => <BadgeGrid size="sm" />,
-};
-
-export const Medium: Omit<Story, 'args'> = {
-  render: () => <BadgeGrid size="md" />,
-};
-
-export const Large: Omit<Story, 'args'> = {
-  render: () => <BadgeGrid size="lg" />,
+export const Default: Omit<Story, 'args'> = {
+  render: () => <BadgeGrid />,
 };
