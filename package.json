@@ -36,7 +36,7 @@
     "@storybook/addon-essentials": "^8.6.11",
     "@storybook/blocks": "^8.6.11",
     "@storybook/react": "^8.6.11",
-    "@storybook/react-vite": "^8.6.11",
+    "@storybook/react-vite": "^8.6.12",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",
     "@vitejs/plugin-react": "^4.3.4",
