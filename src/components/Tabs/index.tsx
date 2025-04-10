@@ -7,6 +7,8 @@ import TabPanel from './components/TabPanel';
 import './styles.css';
 
 export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
+  Button: typeof TabButton;
+  Panel: typeof TabPanel;
   tabs: Omit<TabButtonProps, 'active'>[];
   panels: {
     value: string;
@@ -42,5 +44,8 @@ const Tabs = ({ tabs, panels, className, ...rest }: TabsProps) => {
     </div>
   );
 };
+
+Tabs.Button = TabButton;
+Tabs.Panel = TabPanel;
 
 export default Tabs;
