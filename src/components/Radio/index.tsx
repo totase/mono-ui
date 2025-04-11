@@ -28,7 +28,9 @@ const Radio = ({ id, label, disabled, className, description, ...rest }: RadioPr
         />
       </span>
 
-      <Label id={id} label={label} description={description} />
+      <Label id={id} description={description}>
+        {label}
+      </Label>
     </div>
   );
 };
