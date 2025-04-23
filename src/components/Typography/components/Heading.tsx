@@ -3,6 +3,8 @@ import cx from 'clsx';
 
 import { Weight } from '@/types';
 
+import '../styles.css';
+
 export interface HeadingProps<T extends ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>
   extends HTMLAttributes<HTMLHeadingElement> {
   light?: boolean;

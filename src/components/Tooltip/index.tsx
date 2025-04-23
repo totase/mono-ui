@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode, useEffect, useRef, useState } from 'react';
 import cx from 'clsx';
 
 import { Position } from '@/types';
-import { Slot, Typography } from '..';
+import { Body, Slot } from '..';
 
 import './styles.css';
 
@@ -96,9 +96,9 @@ const Tooltip = ({ content, className, children, ...rest }: TooltipProps) => {
           style={{ top: state.position.y, left: state.position.x }}
           {...rest}
         >
-          <Typography as="span" light tiny>
+          <Body as="span" light>
             {content}
-          </Typography>
+          </Body>
 
           <div className="mono-ui-tooltip__arrow" />
         </div>

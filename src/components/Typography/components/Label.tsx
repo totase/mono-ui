@@ -3,7 +3,7 @@ import cx from 'clsx';
 
 import Body from './Body';
 
-import './styles.css';
+import '../styles.css';
 
 export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   id: string;

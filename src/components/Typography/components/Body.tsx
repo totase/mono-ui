@@ -3,6 +3,8 @@ import cx from 'clsx';
 
 import { Weight } from '@/types';
 
+import '../styles.css';
+
 export interface BodyProps<T extends ElementType = 'p' | 'span'>
   extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
   light?: boolean;
