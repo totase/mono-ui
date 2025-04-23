@@ -1,7 +1,0 @@
-.mono-ui-label {
-  display: flex;
-  flex-direction: column;
-
-  line-height: 1.25;
-  font-size: var(--mono-ui--font-size-base);
-}

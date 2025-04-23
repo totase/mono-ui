@@ -1,7 +1,7 @@
 import { LabelHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Typography } from '..';
+import Body from './Body';
 
 import './styles.css';
 
@@ -19,9 +19,9 @@ const Label = ({ id, children, className, description, ...rest }: LabelProps) =>
       {children}
 
       {description && (
-        <Typography id={`${id}-description`} as="span" light>
+        <Body id={`${id}-description`} as="span" light>
           {description}
-        </Typography>
+        </Body>
       )}
     </label>
   );
