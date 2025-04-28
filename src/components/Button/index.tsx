@@ -9,7 +9,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   loading?: boolean;
   outline?: boolean;
-  appearance?: Appearance;
+  // TODO: Add 'flat' to 'appearance' type?
+  appearance?: Appearance | 'flat';
 }
 
 const Button = ({ children, disabled, className, appearance = 'default', loading = false, ...rest }: ButtonProps) => {
@@ -19,7 +20,7 @@ const Button = ({ children, disabled, className, appearance = 'default', loading
   });
 
   return (
-    <button className={classNames} disabled={loading || disabled} {...rest}>
+    <button className={classNames} disabled={loading || disabled} aria-disabled={disabled} {...rest}>
       {children}
     </button>
   );

@@ -24,6 +24,9 @@ const ButtonGrid = (props: any) => (
     <Button {...props} appearance="outline">
       Outline
     </Button>
+    <Button {...props} appearance="flat">
+      Flat
+    </Button>
   </Flex>
 );
 

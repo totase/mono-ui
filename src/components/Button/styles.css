@@ -55,6 +55,20 @@
   }
 }
 
+.mono-ui-button--flat {
+  color: var(--mono-ui--color-500);
+  background-color: var(--mono-ui--color-white);
+  border: 1px solid var(--mono-ui--color-white);
+
+  &:not(.mono-ui-button--disabled):hover {
+    border-color: var(--mono-ui--color-200);
+    background-color: var(--mono-ui--color-200);
+  }
+  &:not(.mono-ui-button--disabled):active {
+    background-color: var(--mono-ui--color-white);
+  }
+}
+
 .mono-ui-button--light {
   color: var(--mono-ui--color-500);
   background-color: var(--mono-ui--color-200);
@@ -65,7 +79,6 @@
     background-color: var(--mono-ui--color-300);
   }
   &:not(.mono-ui-button--disabled):active {
-    color: var(--mono-ui--color-500);
     background-color: var(--mono-ui--color-white);
   }
 }
