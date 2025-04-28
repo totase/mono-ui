@@ -1,0 +1,40 @@
+@keyframes popup {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mono-ui-popover {
+  animation: popup 150ms ease-in-out;
+
+  padding: 0;
+  position: fixed;
+
+  border-radius: var(--mono-ui--radius-md);
+  border: 1px solid var(--mono-ui--color-200);
+  background-color: var(--mono-ui--color-white);
+
+  &.mono-ui-popover--hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.mono-ui-popover--title {
+  padding: var(--mono-ui--spacing-sm);
+  border-bottom: 1px solid var(--mono-ui--color-200);
+
+  display: flex;
+  gap: var(--mono-ui--spacing-md);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mono-ui-popover--content {
+  padding: var(--mono-ui--spacing-sm);
+}
