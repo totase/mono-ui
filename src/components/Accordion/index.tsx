@@ -8,8 +8,6 @@ import AccordionContent from './components/AccordionContent';
 import './styles.css';
 
 export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
-  Header: typeof AccordionHeader;
-  Content: typeof AccordionContent;
   initialOpen?: boolean;
 }
 
