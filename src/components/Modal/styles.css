@@ -1,0 +1,46 @@
+@keyframes popup {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mono-ui-modal {
+  animation: popup 150ms ease-in-out;
+
+  padding: 0;
+  border-radius: var(--mono-ui--radius-md);
+  border: 1px solid var(--mono-ui--color-200);
+  background-color: var(--mono-ui--color-white);
+
+  @media (width < 500px) {
+    width: 100%;
+
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.mono-ui-modal--header {
+  padding: var(--mono-ui--spacing-md);
+  border-bottom: 1px solid var(--mono-ui--color-200);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mono-ui-modal--body {
+  overflow-y: auto;
+  padding: var(--mono-ui--spacing-md);
+}
+
+.mono-ui-modal--footer {
+  padding: var(--mono-ui--spacing-md);
+  border-top: 1px solid var(--mono-ui--color-200);
+}
