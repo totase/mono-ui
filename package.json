@@ -18,6 +18,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "test": "vitest",
     "build": "rm -rf dist && tsc && vite build",
     "build-storybook": "storybook build",
     "lint": "eslint .",
