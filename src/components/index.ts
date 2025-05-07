@@ -8,6 +8,7 @@ export { default as Horizontal, type HorizontalProps } from './Horizontal';
 export { default as Input, type InputProps } from './Input';
 export { default as Link, type LinkProps } from './Link';
 export { default as Modal, type ModalProps } from './Modal';
+export { default as Pagination, type PaginationProps } from './Pagination';
 export { default as Popover, type PopoverProps } from './Popover';
 export { default as Radio, type RadioProps } from './Radio';
 export { default as Select, type SelectProps } from './Select';

@@ -1,0 +1,6 @@
+.mono-ui-pagination {
+  list-style: none;
+
+  display: flex;
+  gap: var(--mono-ui--spacing-sm);
+}
