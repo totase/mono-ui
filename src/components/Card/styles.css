@@ -1,11 +1,11 @@
 .mono-ui-card--padding-sm {
-  padding: var(--mono-ui--spacing-sm);
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
 }
 .mono-ui-card--padding-md {
-  padding: var(--mono-ui--spacing-md);
+  padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-md);
 }
 .mono-ui-card--padding-lg {
-  padding: var(--mono-ui--spacing-lg);
+  padding: var(--mono-ui--spacing-md) var(--mono-ui--spacing-lg);
 }
 
 .mono-ui-card--panel {
