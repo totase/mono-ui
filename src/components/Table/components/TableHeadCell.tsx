@@ -8,12 +8,7 @@ export interface TableHeadCellProps extends ThHTMLAttributes<HTMLTableCellElemen
 }
 
 const TableHeadCell = ({ className, align = 'left', ...rest }: TableHeadCellProps) => {
-  const classNames = cx(
-    'mono-ui-table__head-cell',
-    'mono-ui-table__cell',
-    className,
-    `mono-ui-table__cell--align-${align}`,
-  );
+  const classNames = cx('mono-ui-table__head-cell', className, `mono-ui-table__cell--align-${align}`);
 
   return <th className={classNames} {...rest} />;
 };

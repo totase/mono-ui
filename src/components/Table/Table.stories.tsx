@@ -30,6 +30,11 @@ export const Default: Omit<Story, 'args'> = {
           <Table.Cell>Row 2, Cell 2</Table.Cell>
           <Table.Cell>Row 2, Cell 3</Table.Cell>
         </Table.Row>
+        <Table.Row>
+          <Table.Cell>Row 3, Cell 1</Table.Cell>
+          <Table.Cell>Row 3, Cell 2</Table.Cell>
+          <Table.Cell>Row 3, Cell 3</Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   ),
