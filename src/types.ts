@@ -7,6 +7,8 @@ export type Position = {
 
 export type Size = 'sm' | 'md' | 'lg';
 
+export type Color = 'default' | 'light' | 'contrast';
+
 export type Weight = 'regular' | 'medium' | 'bold';
 
 export type Align = 'left' | 'center' | 'right';
