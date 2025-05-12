@@ -4,16 +4,19 @@
 
   line-height: 1.25;
   font-size: var(--mono-ui--font-size-base);
+  font-weight: 500;
 }
 
 .mono-ui-typography {
   margin: 0;
 
-  &:not(.mono-ui-typography--light) {
+  &.mono-ui-typography--color-default {
     color: var(--mono-ui--color-500);
   }
-
-  &.mono-ui-typography--light {
+  &.mono-ui-typography--color-light {
+    color: var(--mono-ui--color-400);
+  }
+  &.mono-ui-typography--color-contrast {
     color: var(--mono-ui--color-100);
   }
 
@@ -28,9 +31,21 @@
   }
 }
 
-h6.mono-ui-typography,
-p.mono-ui-typography,
-span.mono-ui-typography {
+p.mono-ui-typography--sm,
+span.mono-ui-typography--sm {
+  font-size: var(--mono-ui--font-size-small);
+}
+p.mono-ui-typography--md,
+span.mono-ui-typography--md {
+  font-size: var(--mono-ui--font-size-base);
+}
+
+p.mono-ui-typography--lg,
+span.mono-ui-typography--lg {
+  font-size: var(--mono-ui--font-size-h5);
+}
+
+h6.mono-ui-typography {
   font-size: var(--mono-ui--font-size-base);
 }
 

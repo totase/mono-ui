@@ -19,7 +19,7 @@ const Label = ({ id, children, className, description, ...rest }: LabelProps) =>
       {children}
 
       {description && (
-        <Body id={`${id}-description`} as="span" light>
+        <Body id={`${id}-description`} color="light" size="sm" as="span">
           {description}
         </Body>
       )}

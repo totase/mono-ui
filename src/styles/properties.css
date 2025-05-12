@@ -18,14 +18,13 @@
 
   /* Colors */
   /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
-  --mono-ui--color-white: #fff;
-
   --mono-ui--color-100: #f8f9fa;
   --mono-ui--color-200: #dee2e6;
   --mono-ui--color-300: #adb5bd;
   --mono-ui--color-400: #495057;
   --mono-ui--color-500: #212529;
 
+  --mono-ui--color-white: #fff;
   --mono-ui--color-black: #000;
 
   /* Border radius */
