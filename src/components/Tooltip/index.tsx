@@ -96,7 +96,7 @@ const Tooltip = ({ content, className, children, ...rest }: TooltipProps) => {
           style={{ top: state.position.y, left: state.position.x }}
           {...rest}
         >
-          <Body as="span" light>
+          <Body as="span" color="contrast">
             {content}
           </Body>
 
