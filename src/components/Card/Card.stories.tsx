@@ -43,3 +43,7 @@ const CardGrid = (props: CardProps) => (
 export const Default: Omit<Story, 'args'> = {
   render: () => <CardGrid radius="md" />,
 };
+
+export const Panel: Omit<Story, 'args'> = {
+  render: () => <CardGrid radius="md" panel />,
+};
