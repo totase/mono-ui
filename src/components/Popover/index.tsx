@@ -1,11 +1,11 @@
 import { HTMLAttributes, RefObject, useEffect, useRef, useState } from 'react';
 import cx from 'clsx';
 
-import { Position } from '@/types';
-import { PopoverContext } from './context';
+import { Position } from '../../types';
 import { useClickOutside } from '../../hooks';
 import PopoverTitle from './components/PopoverTitle';
 import PopoverContent from './components/PopoverContent';
+import { PopoverContext } from './context';
 
 import './styles.css';
 

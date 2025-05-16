@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode, useEffect, useRef, useState } from 'react';
 import cx from 'clsx';
 
-import { Position } from '@/types';
+import { Position } from '../../types';
 import { Body, Slot } from '..';
 
 import './styles.css';

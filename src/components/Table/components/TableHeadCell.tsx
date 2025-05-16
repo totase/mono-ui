@@ -1,7 +1,7 @@
 import { ThHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Align } from '@/types';
+import { Align } from '../../types';
 
 export interface TableHeadCellProps extends ThHTMLAttributes<HTMLTableCellElement> {
   align?: Align;

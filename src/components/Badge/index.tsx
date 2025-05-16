@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Appearance } from '@/types';
+import { Appearance } from '../../types';
 
 import './styles.css';
 
