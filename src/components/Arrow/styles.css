@@ -1,0 +1,22 @@
+.mono-ui-arrow {
+  border: solid var(--mono-ui--color-500);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.mono-ui-arrow--animated {
+  transition: transform 150ms ease;
+}
+
+.mono-ui-arrow--right {
+  transform: rotate(-45deg) translate(0px, -3px);
+}
+.mono-ui-arrow--left {
+  transform: rotate(135deg) translate(-3px, 0px);
+}
+.mono-ui-arrow--up {
+  transform: rotate(-135deg);
+}
+.mono-ui-arrow--down {
+  transform: rotate(45deg) translate(-2px, -2px);
+}
