@@ -12,8 +12,6 @@
 
   border-radius: var(--mono-ui--radius-rounded);
 
-  cursor: pointer;
-
   transition: background-color 150ms ease;
 
   &:not(:has(input[type='checkbox']:checked)) {
@@ -46,6 +44,8 @@
 
     margin: 0;
     opacity: 0;
+
+    cursor: pointer;
   }
 }
 
@@ -61,4 +61,14 @@
   background-color: var(--mono-ui--color-white);
 
   transition: transform 150ms ease;
+}
+
+.mono-ui-toggle--disabled {
+  & > input[type='checkbox'] {
+    cursor: not-allowed;
+  }
+
+  & .mono-ui-toggle__thumb {
+    background-color: var(--mono-ui--color-200);
+  }
 }
