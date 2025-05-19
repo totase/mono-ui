@@ -3,8 +3,20 @@
   overflow-x: auto;
   border-spacing: 0;
 }
-.mono-ui-table--striped .mono-ui-table__row:nth-child(even) .mono-ui-table__cell {
-  background-color: var(--mono-ui--color-100);
+.mono-ui-table--striped .mono-ui-table__body :where(.mono-ui-table__row:nth-child(even)) .mono-ui-table__cell {
+  background-color: red; /*var(--mono-ui--color-100); */
+}
+.mono-ui-table--striped
+  .mono-ui-table__body
+  :where(.mono-ui-table__expandable-row:nth-child(4n + 1))
+  .mono-ui-table__cell {
+  background-color: transparent;
+}
+.mono-ui-table--striped
+  .mono-ui-table__body
+  .mono-ui-table__expandable-row__content:nth-child(4n)
+  .mono-ui-table__cell {
+  background-color: red;
 }
 
 .mono-ui-table--auto {
@@ -60,6 +72,30 @@
     }
     .mono-ui-table__cell:last-child {
       border-bottom-right-radius: var(--mono-ui--radius-md);
+    }
+  }
+}
+
+.mono-ui-table__expandable-row__content {
+  transition: opacity 150ms ease-in-out;
+}
+
+.mono-ui-table__expandable-row {
+  transition: border-color 150ms ease;
+
+  &.mono-ui-table__expandable-row--open .mono-ui-table__cell {
+    border-bottom-color: transparent;
+  }
+
+  &:not(.mono-ui-table__expandable-row--open) + .mono-ui-table__expandable-row__content {
+    opacity: 0;
+
+    visibility: hidden;
+
+    & .mono-ui-table__cell {
+      padding: 0;
+      line-height: 0;
+      border-width: 0;
     }
   }
 }

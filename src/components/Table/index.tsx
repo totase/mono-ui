@@ -6,6 +6,7 @@ import TableCell from './components/TableCell';
 import TableHead from './components/TableHead';
 import TableHeadCell from './components/TableHeadCell';
 import TableRow from './components/TableRow';
+import ExpandableRow from './components/ExpandableRow';
 
 import './styles.css';
 
@@ -27,5 +28,6 @@ Table.Cell = TableCell;
 Table.Head = TableHead;
 Table.HeadCell = TableHeadCell;
 Table.Row = TableRow;
+Table.ExpandableRow = ExpandableRow;
 
 export default Table;
