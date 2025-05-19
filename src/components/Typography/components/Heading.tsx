@@ -1,7 +1,7 @@
 import { ElementType, HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Color, Weight } from '../../types';
+import { Color, Weight } from '../../../types';
 
 import '../styles.css';
 

@@ -1,7 +1,7 @@
 import { TdHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Align } from '../../types';
+import { Align } from '../../../types';
 
 export interface TableCellProps extends TdHTMLAttributes<HTMLTableCellElement> {
   align?: Align;
