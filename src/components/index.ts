@@ -1,4 +1,5 @@
 export { default as Accordion, type AccordionProps } from './Accordion';
+export { default as Arrow, type ArrowProps } from './Arrow';
 export { default as Badge, type BadgeProps } from './Badge';
 export { default as Button, type ButtonProps } from './Button';
 export { default as Card, type CardProps } from './Card';
