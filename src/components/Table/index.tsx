@@ -15,7 +15,7 @@ export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   striped?: boolean;
 }
 
-const Table = ({ className, striped = true, layout = 'auto', ...rest }: TableProps) => {
+const Table = ({ className, striped = false, layout = 'auto', ...rest }: TableProps) => {
   const classNames = cx('mono-ui-table', className, `mono-ui-table--${layout}`, {
     'mono-ui-table--striped': striped,
   });

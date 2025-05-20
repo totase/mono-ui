@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Table from '.';
+import Table, { TableProps } from '.';
 
 const meta = {
   title: 'Components/Table',
@@ -11,38 +11,44 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const TableComponent = (props: TableProps) => (
+  <Table {...props}>
+    <Table.Head>
+      <Table.HeadCell>Header 1</Table.HeadCell>
+      <Table.HeadCell>Header 2</Table.HeadCell>
+      <Table.HeadCell>Header 3</Table.HeadCell>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Row 1, Cell 1</Table.Cell>
+        <Table.Cell>Row 1, Cell 2</Table.Cell>
+        <Table.Cell>Row 1, Cell 3</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Row 2, Cell 1</Table.Cell>
+        <Table.Cell>Row 2, Cell 2</Table.Cell>
+        <Table.Cell>Row 2, Cell 3</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Row 3, Cell 1</Table.Cell>
+        <Table.Cell>Row 3, Cell 2</Table.Cell>
+        <Table.Cell>Row 3, Cell 3</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
 export const Default: Omit<Story, 'args'> = {
-  render: () => (
-    <Table>
-      <Table.Head>
-        <Table.HeadCell>Header 1</Table.HeadCell>
-        <Table.HeadCell>Header 2</Table.HeadCell>
-        <Table.HeadCell>Header 3</Table.HeadCell>
-      </Table.Head>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell>Row 1, Cell 1</Table.Cell>
-          <Table.Cell>Row 1, Cell 2</Table.Cell>
-          <Table.Cell>Row 1, Cell 3</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Row 2, Cell 1</Table.Cell>
-          <Table.Cell>Row 2, Cell 2</Table.Cell>
-          <Table.Cell>Row 2, Cell 3</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Row 3, Cell 1</Table.Cell>
-          <Table.Cell>Row 3, Cell 2</Table.Cell>
-          <Table.Cell>Row 3, Cell 3</Table.Cell>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  ),
+  render: () => <TableComponent />,
+};
+
+export const Striped: Omit<Story, 'args'> = {
+  render: () => <TableComponent striped />,
 };
 
 export const ExpandableRows: Omit<Story, 'args'> = {
   render: () => (
-    <Table>
+    <Table striped>
       <Table.Head>
         <Table.HeadCell>Header 1</Table.HeadCell>
         <Table.HeadCell>Header 2</Table.HeadCell>
