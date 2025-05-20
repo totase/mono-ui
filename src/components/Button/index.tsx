@@ -11,7 +11,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
   // TODO: Add 'flat' to 'appearance' type?
   appearance?: Appearance | 'flat';
-  ref: RefObject<HTMLButtonElement | null>;
+  ref?: RefObject<HTMLButtonElement | null>;
 }
 
 const Button = ({ children, disabled, className, appearance = 'default', loading = false, ...rest }: ButtonProps) => {
