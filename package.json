@@ -1,35 +1,30 @@
 {
-  "name": "mono-ui",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@totase/mono-ui",
+  "version": "0.1.7",
   "type": "module",
   "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "main": "./dist/mono-ui.umd.cjs",
-  "module": "./dist/mono-ui.js",
-  "exports": {
-    ".": {
-      "import": "./dist/mono-ui.js",
-      "require": "./dist/mono-ui.umd.cjs"
-    },
-    "./style.css": "./dist/mono-ui.css"
-  },
+  "sideEffects": false,
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run storybook",
     "test": "vitest",
-    "build": "rm -rf dist && tsc && vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "prettier": "prettier --write src/",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006"
   },
+  "peerDependencies": {
+    "react": ">=19.1.0",
+    "react-dom": ">=19.1.0"
+  },
   "dependencies": {
-    "clsx": "^2.1.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
@@ -64,5 +59,6 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "license": "MIT"
 }
