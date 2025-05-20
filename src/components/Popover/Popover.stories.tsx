@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Popover from '.';
 import { Body } from '../Typography';
+import Button from '../Button';
 
 const meta = {
   title: 'Components/Popover',
@@ -20,9 +21,9 @@ const PopoverTrigger = () => {
 
   return (
     <div>
-      <button ref={buttonRef} onClick={() => setOpen(!open)}>
+      <Button ref={buttonRef} onClick={() => setOpen(!open)}>
         Open Popover
-      </button>
+      </Button>
 
       <Popover anchor={buttonRef} open={open} onClose={() => setOpen(false)}>
         <Popover.Title heading="Popover" />
