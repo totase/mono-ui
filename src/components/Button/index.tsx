@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, MouseEvent } from 'react';
+import { ButtonHTMLAttributes, MouseEvent, RefObject } from 'react';
 import cx from 'clsx';
 
 import { Appearance } from '../../types';
@@ -11,6 +11,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
   // TODO: Add 'flat' to 'appearance' type?
   appearance?: Appearance | 'flat';
+  ref: RefObject<HTMLButtonElement | null>;
 }
 
 const Button = ({ children, disabled, className, appearance = 'default', loading = false, ...rest }: ButtonProps) => {
