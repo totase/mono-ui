@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, useContext } from 'react';
 import cx from 'clsx';
 
+import Arrow from '../../Arrow';
 import { AccordionContext } from '../context';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -22,7 +23,7 @@ const AccordionHeader = ({ children, className, onClick, ...rest }: AccordionHea
   return (
     <button className={classNames} onClick={handleClick} aria-expanded={context?.open} {...rest}>
       {children}
-      <span className="mono-ui-accordion__header__arrow" />
+      <Arrow direction={context?.open ? 'up' : 'down'} />
     </button>
   );
 };

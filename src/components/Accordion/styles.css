@@ -17,26 +17,6 @@
 
   width: 100%;
   padding: var(--mono-ui--spacing-md) var(--mono-ui--spacing-sm);
-
-  &:not(.mono-ui-accordion__header--open) .mono-ui-accordion__header__arrow {
-    margin-top: -3px;
-    border-width: 0 1px 1px 0;
-  }
-}
-
-.mono-ui-accordion__header--open .mono-ui-accordion__header__arrow {
-  margin-top: 3px;
-  border-width: 1px 0 0 1px;
-}
-
-.mono-ui-accordion__header__arrow {
-  transform: rotate(45deg);
-
-  width: 8px;
-  height: 8px;
-
-  border-style: solid;
-  border-color: var(--mono-ui--color-500);
 }
 
 .mono-ui-accordion__content {
