@@ -2,9 +2,9 @@ import { MouseEvent, useState } from 'react';
 import cx from 'clsx';
 
 import Arrow from '../../Arrow';
+import Button from '../../Button';
 import TableRow, { TableRowProps } from './TableRow';
 import TableCell from './TableCell';
-import Button from '../../Button';
 
 export interface ExpandableRowProps extends TableRowProps {
   disabled?: boolean;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Badge from '.';
 import { Flex } from '..';
+import Badge from '.';
 
 const meta = {
   title: 'Components/Badge',
