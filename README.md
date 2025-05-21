@@ -18,6 +18,8 @@ Styling is included in each component.
 
 ```jsx
 import { Badge } from '@totase/mono-ui';
+// Include global css properties
+import '@totase/mono-ui/dist/styles/index.css';
 
 function Component() {
   return <Badge appearance="default">3 updates</Badge>;
@@ -25,6 +27,8 @@ function Component() {
 ```
 
 ### Components
+
+🚧
 
 **Defaults**
 

@@ -1,4 +1,16 @@
 {
-  "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "incremental": true,
+    "skipLibCheck": true,
+
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "types": ["vitest/globals"]
+  },
+  "include": ["./src"]
 }
