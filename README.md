@@ -26,7 +26,11 @@ function Component() {
 
 ### Components
 
-🚧
+**Defaults**
+
+**Form**
+
+- [Input](./src/components/Input)
 
 ## License
 
