@@ -28,9 +28,15 @@ function Component() {
 
 **Defaults**
 
+- [Accordion](./src/components/Accordion)
+
 **Form**
 
+- [Checkbox](./src/components/Checkbox)
 - [Input](./src/components/Input)
+- [Radio](./src/components/Radio)
+- [Select](./src/components/Select)
+- [Toggle](./src/components/Toggle)
 
 ## License
 
