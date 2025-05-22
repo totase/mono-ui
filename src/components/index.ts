@@ -8,6 +8,7 @@ export { default as Flex, type FlexProps } from './Flex';
 export { default as Horizontal, type HorizontalProps } from './Horizontal';
 export { default as Input, type InputProps } from './Input';
 export { default as Link, type LinkProps } from './Link';
+export { default as List, type ListProps } from './List';
 export { default as Modal, type ModalProps } from './Modal';
 export { default as Pagination, type PaginationProps } from './Pagination';
 export { default as Popover, type PopoverProps } from './Popover';
