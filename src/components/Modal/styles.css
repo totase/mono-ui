@@ -20,7 +20,7 @@
   @media (width < 500px) {
     width: 100%;
 
-    margin-bottom: 0;
+    margin-block-end: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }

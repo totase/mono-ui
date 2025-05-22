@@ -9,7 +9,7 @@
   background: none;
   cursor: pointer;
 
-  margin-bottom: -1px;
+  margin-block-end: -1px;
 
   display: inline-flex;
   border-bottom: 2px solid transparent;

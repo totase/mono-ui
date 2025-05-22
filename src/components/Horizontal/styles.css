@@ -9,11 +9,11 @@
 }
 
 .mono-ui-horizontal--small {
-  margin: var(--mono-ui--spacing-sm) 0;
+  margin-block: var(--mono-ui--spacing-sm);
 }
 .mono-ui-horizontal--medium {
-  margin: var(--mono-ui--spacing-md) 0;
+  margin-block: var(--mono-ui--spacing-md) 0;
 }
 .mono-ui-horizontal--large {
-  margin: var(--mono-ui--spacing-lg) 0;
+  margin-block: var(--mono-ui--spacing-lg) 0;
 }
