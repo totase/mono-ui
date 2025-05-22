@@ -4,7 +4,7 @@
 
   line-height: 1.25;
   font-size: var(--mono-ui--font-size-base);
-  font-weight: 500;
+  font-weight: var(--mono-ui--font-weight-medium);
 }
 
 .mono-ui-typography {
@@ -20,14 +20,17 @@
     color: var(--mono-ui--color-100);
   }
 
+  &.mono-ui-typography--light {
+    font-weight: var(--mono-ui--font-weight-light);
+  }
   &.mono-ui-typography--regular {
-    font-weight: 400;
+    font-weight: var(--mono-ui--font-weight-regular);
   }
   &.mono-ui-typography--medium {
-    font-weight: 500;
+    font-weight: var(--mono-ui--font-weight-medium);
   }
   &.mono-ui-typography--bold {
-    font-weight: 700;
+    font-weight: var(--mono-ui--font-weight-bold);
   }
 }
 

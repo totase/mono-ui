@@ -14,7 +14,7 @@ ol.mono-ui-list--list-styling {
   list-style: decimal;
 
   & li::marker {
-    font-weight: 700;
+    font-weight: var(--mono-ui--font-weight-bold);
   }
 }
 ul.mono-ui-list--list-styling {

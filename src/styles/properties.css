@@ -16,6 +16,14 @@
   --mono-ui--font-size-h4: 1.25rem; /* 20px */
   --mono-ui--font-size-h5: 1.125rem; /* 18px */
 
+  /* Font weights */
+  --mono-ui--font-weight-light: 300;
+  --mono-ui--font-weight-regular: 400;
+  --mono-ui--font-weight-medium: 500;
+  --mono-ui--font-weight-bold: 700;
+
+  /* Line heights */
+
   /* Colors */
   /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
   --mono-ui--color-100: #f8f9fa;
