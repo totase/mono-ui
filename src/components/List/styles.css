@@ -1,0 +1,30 @@
+.mono-ui-list {
+  margin-block: var(--mono-ui--spacing-sm);
+  padding-left: var(--mono-ui--spacing-lg);
+
+  &:not(.mono-ui-list--list-styling) {
+    list-style: none;
+  }
+
+  & .mono-ui-list {
+    margin-block: var(--mono-ui--spacing-xs) 0;
+  }
+}
+ol.mono-ui-list--list-styling {
+  list-style: decimal;
+
+  & li::marker {
+    font-weight: 700;
+  }
+}
+ul.mono-ui-list--list-styling {
+  list-style: disc;
+}
+
+.mono-ui-list__item {
+  padding-left: var(--mono-ui--spacing-xs);
+
+  &:not(:last-child) {
+    margin-block-end: var(--mono-ui--spacing-xs);
+  }
+}
