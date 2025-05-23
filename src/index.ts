@@ -20,6 +20,7 @@ export { Select, type SelectProps } from './components';
 export { Slot, type SlotProps } from './components';
 export { Table, type TableProps } from './components';
 export { Tabs, type TabsProps } from './components';
+export { Textarea, type TextareaProps } from './components';
 export { Toggle, type ToggleProps } from './components';
 export { Tooltip, type TooltipProps } from './components';
 export { Body, type BodyProps } from './components/Typography';

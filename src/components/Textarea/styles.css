@@ -1,0 +1,27 @@
+.mono-ui-textarea__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mono-ui--spacing-xs);
+}
+
+.mono-ui-textarea {
+  font-family: inherit;
+  border-radius: var(--mono-ui--radius-md);
+
+  resize: vertical;
+  border: 1px solid var(--mono-ui--color-200);
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+
+  transition:
+    background-color 100ms ease-in-out,
+    border-color 100ms ease-in-out;
+
+  &:not(.mono-ui-textarea--disabled, .mono-ui-textarea--readOnly):hover {
+    border-color: var(--mono-ui--color-500);
+  }
+}
+
+.mono-ui-textarea--disabled {
+  cursor: not-allowed;
+  background-color: var(--mono-ui--color-100);
+}

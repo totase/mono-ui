@@ -17,6 +17,7 @@ export { default as Select, type SelectProps } from './Select';
 export { default as Slot, type SlotProps } from './Slot';
 export { default as Table, type TableProps } from './Table';
 export { default as Tabs, type TabsProps } from './Tabs';
+export { default as Textarea, type TextareaProps } from './Textarea';
 export { default as Toggle, type ToggleProps } from './Toggle';
 export { default as Tooltip, type TooltipProps } from './Tooltip';
 export { Body, type BodyProps, Heading, type HeadingProps, Label, type LabelProps } from './Typography';
