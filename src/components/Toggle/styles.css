@@ -8,7 +8,7 @@
   position: relative;
 
   width: 42px;
-  height: 24px;
+  height: 22px;
 
   border-radius: var(--mono-ui--radius-rounded);
 
@@ -18,7 +18,7 @@
     background-color: var(--mono-ui--color-300);
 
     & .mono-ui-toggle__thumb {
-      transform: translateY(-50%) translateX(4px);
+      transform: translateY(-50%) translateX(3px);
     }
   }
 
@@ -26,7 +26,7 @@
     background-color: var(--mono-ui--color-500);
 
     & .mono-ui-toggle__thumb {
-      transform: translateY(-50%) translateX(22px);
+      transform: translateY(-50%) translateX(23px);
     }
   }
 
