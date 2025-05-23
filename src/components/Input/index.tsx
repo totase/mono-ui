@@ -20,7 +20,7 @@ const Input = ({ id, label, description, className, type = 'text', disabled, rea
 
   return (
     <div className="mono-ui-input__container">
-      <Label id={id} description={description}>
+      <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
       <input

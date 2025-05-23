@@ -19,6 +19,10 @@ export const Disabled: Omit<Story, 'args'> = {
   render: () => <Input id="story-input" label="Input" disabled />,
 };
 
+export const ReadOnly: Omit<Story, 'args'> = {
+  render: () => <Input id="story-input" label="Input" readOnly />,
+};
+
 export const Description: Omit<Story, 'args'> = {
   render: () => <Input id="story-input" label="Input" description="Optional description" />,
 };
