@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Input from '.';
 
 const meta = {
-  title: 'Components/Inputs/Input',
+  title: 'Components/Form/Input',
   component: Input,
 } satisfies Meta<typeof Input>;
 
@@ -20,5 +20,5 @@ export const Disabled: Omit<Story, 'args'> = {
 };
 
 export const Description: Omit<Story, 'args'> = {
-  render: () => <Input id="story-input" label="Input" description="Optional input description" />,
+  render: () => <Input id="story-input" label="Input" description="Optional description" />,
 };
