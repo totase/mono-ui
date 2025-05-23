@@ -1,7 +1,8 @@
 {
   "name": "@totase/mono-ui",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "repository": "totase/mono-ui",
+  "homepage": "https://totase.github.io/mono-ui/",
   "type": "module",
   "source": "./src/index.ts",
   "main": "./dist/index.js",
