@@ -5,6 +5,10 @@
   line-height: 1.25;
   font-size: var(--mono-ui--font-size-base);
   font-weight: var(--mono-ui--font-weight-medium);
+
+  &.mono-ui-label--disabled {
+    color: var(--mono-ui--color-300);
+  }
 }
 
 .mono-ui-typography {

@@ -9,10 +9,13 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   id: string;
   children: string;
   description?: string;
+  disabled?: boolean;
 }
 
-const Label = ({ id, children, className, description, ...rest }: LabelProps) => {
-  const classNames = cx('mono-ui-label', className);
+const Label = ({ id, children, className, description, disabled, ...rest }: LabelProps) => {
+  const classNames = cx('mono-ui-label', className, {
+    'mono-ui-label--disabled': disabled,
+  });
 
   return (
     <label className={classNames} htmlFor={id} {...rest}>
