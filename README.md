@@ -4,7 +4,7 @@ Minimalistic and accessible components for React projects.
 
 ## About
 
-🚧
+- [Storybook](https://totase.github.io/mono-ui/)
 
 ## Installation
 
