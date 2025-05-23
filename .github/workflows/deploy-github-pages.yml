@@ -24,3 +24,8 @@ jobs:
         with:
           path: storybook-static
           checkout: false
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages-${{ github.run_id }}
+          path: storybook-static
