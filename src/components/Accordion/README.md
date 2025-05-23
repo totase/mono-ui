@@ -9,7 +9,7 @@ import { Accordion } from '@totase/mono-ui';
 
 function Component() {
   return (
-    <Accordion {...props}>
+    <Accordion>
       <Accordion.Header>Accordion header</Accordion.Header>
       <Accordion.Content>Expandable content</Accordion.Content>
     </Accordion>
