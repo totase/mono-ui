@@ -28,7 +28,7 @@ const Checkbox = ({ id, label, className, disabled, description, ...rest }: Chec
         />
       </span>
 
-      <Label id={id} description={description}>
+      <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
     </div>

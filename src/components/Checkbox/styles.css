@@ -11,9 +11,16 @@
   height: 16px;
 
   border-radius: var(--mono-ui--radius-sm);
-  border: 1px solid var(--mono-ui--color-500);
+  border: 1px solid;
 
   cursor: pointer;
+
+  &:not(.mono-ui-checkbox--disabled) {
+    border-color: var(--mono-ui--color-300);
+  }
+  &:not(.mono-ui-checkbox--disabled):hover {
+    border-color: var(--mono-ui--color-500);
+  }
 
   &::before {
     content: '';
@@ -23,12 +30,11 @@
     width: 4px;
     height: 8px;
 
-    border: solid var(--mono-ui--color-white);
+    border: solid transparent;
     border-width: 0 2px 2px 0;
 
-    transform: translateY(-60%) translateX(-50%) rotate(45deg);
-
     transition: border-color 150ms ease;
+    transform: translateY(-60%) translateX(-50%) rotate(45deg);
   }
 
   &:has(input[type='checkbox']:checked)::before {
@@ -61,10 +67,9 @@
 .mono-ui-checkbox--disabled {
   cursor: not-allowed;
 
-  background-color: var(--mono-ui--color-100);
   border-color: var(--mono-ui--color-200);
 
   &::before {
-    border-color: var(--mono-ui--color-100);
+    border-color: transparent;
   }
 }
