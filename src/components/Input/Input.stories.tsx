@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import Flex from '../Flex';
 import Input from '.';
 
 const meta = {
@@ -11,18 +12,22 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const InputGrid = (props: any) => (
+  <Flex gap="md" align="end">
+    <Input {...props} id="default-input" label="Input" />
+    <Input {...props} id="description-input" label="Input" description="Optional description" />
+  </Flex>
+);
+
 export const Default: Omit<Story, 'args'> = {
-  render: () => <Input id="story-input" label="Input" />,
+  render: () => <InputGrid />,
 };
 
 export const Disabled: Omit<Story, 'args'> = {
-  render: () => <Input id="story-input" label="Input" disabled />,
+  render: () => <InputGrid disabled />,
 };
 
 export const ReadOnly: Omit<Story, 'args'> = {
-  render: () => <Input id="story-input" label="Input" readOnly />,
-};
-
-export const Description: Omit<Story, 'args'> = {
-  render: () => <Input id="story-input" label="Input" description="Optional description" />,
+  render: () => <InputGrid readOnly />,
 };
