@@ -16,21 +16,21 @@ const variants = ['0', '100', '200', '300', '400', '500'] as CardProps['variant'
 
 const CardGrid = (props: CardProps) => (
   <Flex direction="column" gap="lg">
-    <Flex>
+    <Flex gap="md">
       {variants.map((variant) => (
         <Card key={variant} {...props} padding="sm" variant={variant}>
           Small - {variant}
         </Card>
       ))}
     </Flex>
-    <Flex>
+    <Flex gap="md">
       {variants.map((variant) => (
         <Card key={variant} {...props} padding="md" variant={variant}>
           Medium - {variant}
         </Card>
       ))}
     </Flex>
-    <Flex>
+    <Flex gap="md">
       {variants.map((variant) => (
         <Card key={variant} {...props} padding="lg" variant={variant}>
           Large - {variant}

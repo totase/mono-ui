@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ButtonGrid = (props: any) => (
-  <Flex>
+  <Flex gap="md">
     <Button {...props} appearance="default">
       Default
     </Button>

@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const BadgeGrid = (props: any) => (
-  <Flex>
+  <Flex gap="md">
     <Badge {...props} appearance="default">
       Default
     </Badge>
