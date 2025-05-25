@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const InputGrid = (props: any) => (
-  <Flex gap="md" align="end">
+  <Flex gap="md" direction="column">
     <Input {...props} id="default-input" label="Input" />
     <Input {...props} id="description-input" label="Input" description="Optional description" />
   </Flex>
