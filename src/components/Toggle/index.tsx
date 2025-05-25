@@ -30,7 +30,7 @@ const Toggle = ({ id, label, disabled, className, description, ...rest }: Toggle
         <span className="mono-ui-toggle__thumb" />
       </span>
 
-      <Label id={id} description={description}>
+      <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
     </div>

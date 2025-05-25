@@ -15,7 +15,7 @@
   transition: background-color 150ms ease;
 
   &:not(:has(input[type='checkbox']:checked)) {
-    background-color: var(--mono-ui--color-300);
+    background-color: var(--mono-ui--color-200);
 
     & .mono-ui-toggle__thumb {
       transform: translateY(-50%) translateX(3px);
@@ -69,6 +69,6 @@
   }
 
   & .mono-ui-toggle__thumb {
-    background-color: var(--mono-ui--color-200);
+    background-color: var(--mono-ui--color-100);
   }
 }
