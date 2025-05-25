@@ -6,7 +6,8 @@
   font-size: var(--mono-ui--font-size-base);
   font-weight: var(--mono-ui--font-weight-medium);
 
-  &.mono-ui-label--disabled {
+  &.mono-ui-label--disabled,
+  &.mono-ui-label--disabled > span {
     color: var(--mono-ui--color-300);
   }
 }
@@ -14,13 +15,13 @@
 .mono-ui-typography {
   margin: 0;
 
-  &.mono-ui-typography--color-default {
+  &:where(.mono-ui-typography--color-default) {
     color: var(--mono-ui--color-500);
   }
-  &.mono-ui-typography--color-light {
+  &:where(.mono-ui-typography--color-light) {
     color: var(--mono-ui--color-400);
   }
-  &.mono-ui-typography--color-contrast {
+  &:where(.mono-ui-typography--color-contrast) {
     color: var(--mono-ui--color-100);
   }
 
