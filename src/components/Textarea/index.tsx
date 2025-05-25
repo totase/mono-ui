@@ -22,7 +22,7 @@ const Textarea = ({ id, label, description, className, disabled, readOnly, rows 
 
   return (
     <div className="mono-ui-textarea__container">
-      <Label id={id} description={description}>
+      <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
       <textarea
