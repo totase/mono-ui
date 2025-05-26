@@ -8,11 +8,12 @@
   padding: var(--mono-ui--spacing-md) var(--mono-ui--spacing-lg);
 }
 
-.mono-ui-card--panel {
-  border: 1px solid transparent;
+.mono-ui-card {
+  border: 1px solid;
 }
 
 .mono-ui-card--variant-0 {
+  border-color: var(--mono-ui--color-white);
   background-color: var(--mono-ui--color-white);
 
   &.mono-ui-card--panel {
@@ -20,6 +21,7 @@
   }
 }
 .mono-ui-card--variant-100 {
+  border-color: var(--mono-ui--color-100);
   background-color: var(--mono-ui--color-100);
 
   &.mono-ui-card--panel {
@@ -27,6 +29,7 @@
   }
 }
 .mono-ui-card--variant-200 {
+  border-color: var(--mono-ui--color-200);
   background-color: var(--mono-ui--color-200);
 
   &.mono-ui-card--panel {
@@ -34,6 +37,7 @@
   }
 }
 .mono-ui-card--variant-300 {
+  border-color: var(--mono-ui--color-300);
   background-color: var(--mono-ui--color-300);
 
   &.mono-ui-card--panel {
@@ -42,6 +46,7 @@
 }
 .mono-ui-card--variant-400 {
   color: var(--mono-ui--color-white);
+  border-color: var(--mono-ui--color-400);
   background-color: var(--mono-ui--color-400);
 
   &.mono-ui-card--panel {
@@ -50,6 +55,7 @@
 }
 .mono-ui-card--variant-500 {
   color: var(--mono-ui--color-white);
+  border-color: var(--mono-ui--color-500);
   background-color: var(--mono-ui--color-500);
 
   &.mono-ui-card--panel {
