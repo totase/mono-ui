@@ -1,28 +1,73 @@
 /******************/
+/*     Colors     */
+/******************/
+.color-block__container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 190px 64px;
+}
+
+.color-block {
+  width: 64px;
+  height: 48px;
+  border: 1px solid transparent;
+  border-radius: var(--mono-ui--radius-sm);
+
+  &.color-block--white {
+    border-color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-white);
+  }
+  &.color-block--black {
+    border-color: var(--mono-ui--color-black);
+    background-color: var(--mono-ui--color-black);
+  }
+  &.color-block--100 {
+    border-color: var(--mono-ui--color-100);
+    background-color: var(--mono-ui--color-100);
+  }
+  &.color-block--200 {
+    border-color: var(--mono-ui--color-200);
+    background-color: var(--mono-ui--color-200);
+  }
+  &.color-block--300 {
+    border-color: var(--mono-ui--color-300);
+    background-color: var(--mono-ui--color-300);
+  }
+  &.color-block--400 {
+    border-color: var(--mono-ui--color-400);
+    background-color: var(--mono-ui--color-400);
+  }
+  &.color-block--500 {
+    border-color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-500);
+  }
+}
+
+/******************/
 /*     Radius     */
 /******************/
-.radius-story__container {
+.radius-block__container {
   display: grid;
   align-items: center;
   gap: var(--mono-ui--spacing-lg);
   grid-template-columns: 1fr 60px 48px;
 }
 
-.radius-story {
+.radius-block {
   width: 48px;
   height: 48px;
   border: 3px solid var(--mono-ui--color-500);
 
-  &.radius-story--sm {
+  &.radius-block--sm {
     border-radius: var(--mono-ui--radius-sm);
   }
-  &.radius-story--md {
+  &.radius-block--md {
     border-radius: var(--mono-ui--radius-md);
   }
-  &.radius-story--lg {
+  &.radius-block--lg {
     border-radius: var(--mono-ui--radius-lg);
   }
-  &.radius-story--rounded {
+  &.radius-block--rounded {
     border-radius: var(--mono-ui--radius-rounded);
   }
 }
@@ -30,28 +75,28 @@
 /*******************/
 /*     Spacing     */
 /*******************/
-.spacing-story__container {
+.spacing-block__container {
   display: grid;
   gap: var(--mono-ui--spacing-lg);
   grid-template-columns: 1fr 60px 20px;
 }
 
-.spacing-story {
+.spacing-block {
   background-color: var(--mono-ui--color-500);
 
-  &.spacing-story--xs {
+  &.spacing-block--xs {
     width: var(--mono-ui--spacing-xs);
   }
-  &.spacing-story--sm {
+  &.spacing-block--sm {
     width: var(--mono-ui--spacing-sm);
   }
-  &.spacing-story--md {
+  &.spacing-block--md {
     width: var(--mono-ui--spacing-md);
   }
-  &.spacing-story--lg {
+  &.spacing-block--lg {
     width: var(--mono-ui--spacing-lg);
   }
-  &.spacing-story--xl {
+  &.spacing-block--xl {
     width: var(--mono-ui--spacing-xl);
   }
 }
