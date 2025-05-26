@@ -6,14 +6,21 @@
 
 .mono-ui-radio {
   position: relative;
+  transition: border-color 100ms ease;
 
   width: 16px;
   height: 16px;
 
   border-radius: var(--mono-ui--radius-rounded);
-  border: 1px solid var(--mono-ui--color-500);
+  border: 1px solid;
 
-  cursor: pointer;
+  &:not(.mono-ui-radio--disabled) {
+    border-color: var(--mono-ui--color-300);
+  }
+  &:not(.mono-ui-radio--disabled):hover,
+  &:has(input[type='radio']:checked) {
+    border-color: var(--mono-ui--color-500);
+  }
 
   &::before {
     content: '';
@@ -27,19 +34,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    transition:
-      background-color 150ms ease,
-      border-color 150ms ease;
+    transition: border-color 150ms ease;
   }
 
   &:has(input[type='radio']:checked)::before {
     background-color: var(--mono-ui--color-500);
   }
 
-  &:has(input[type='radio']:active)::before {
-    border-color: var(--mono-ui--color-400);
-    background-color: var(--mono-ui--color-400);
+  &:not(.mono-ui-radio--disabled) {
+    &:has(input[type='radio']:active) {
+      border-color: var(--mono-ui--color-400);
+    }
+    &:has(input[type='radio']:active)::before {
+      border-color: var(--mono-ui--color-400);
+    }
+
+    & > input[type='radio'] {
+      cursor: pointer;
+    }
   }
 
   & > input[type='radio'] {
@@ -49,5 +61,15 @@
 
     margin: 0;
     opacity: 0;
+  }
+}
+
+.mono-ui-radio--disabled {
+  cursor: not-allowed;
+
+  border-color: var(--mono-ui--color-200);
+
+  &::before {
+    border-color: transparent;
   }
 }

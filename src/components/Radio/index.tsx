@@ -18,7 +18,7 @@ const Radio = ({ id, label, disabled, className, description, ...rest }: RadioPr
 
   return (
     <div className="mono-ui-radio__container">
-      <span className={classNames} tabIndex={0}>
+      <span className={classNames}>
         <input
           id={id}
           type="radio"
@@ -28,7 +28,7 @@ const Radio = ({ id, label, disabled, className, description, ...rest }: RadioPr
         />
       </span>
 
-      <Label id={id} description={description}>
+      <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
     </div>
