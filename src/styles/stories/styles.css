@@ -1,3 +1,41 @@
+/******************/
+/*     Radius     */
+/******************/
+.radius-story__container {
+  display: grid;
+  align-items: center;
+  gap: var(--mono-ui--spacing-lg);
+  grid-template-columns: 1fr 60px 48px;
+}
+
+.radius-story {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--mono-ui--color-500);
+
+  &.radius-story--sm {
+    border-radius: var(--mono-ui--radius-sm);
+  }
+  &.radius-story--md {
+    border-radius: var(--mono-ui--radius-md);
+  }
+  &.radius-story--lg {
+    border-radius: var(--mono-ui--radius-lg);
+  }
+  &.radius-story--rounded {
+    border-radius: var(--mono-ui--radius-rounded);
+  }
+}
+
+/*******************/
+/*     Spacing     */
+/*******************/
+.spacing-story__container {
+  display: grid;
+  gap: var(--mono-ui--spacing-lg);
+  grid-template-columns: 1fr 60px 20px;
+}
+
 .spacing-story {
   background-color: var(--mono-ui--color-500);
 
@@ -16,10 +54,4 @@
   &.spacing-story--xl {
     width: var(--mono-ui--spacing-xl);
   }
-}
-
-.spacing-story__container {
-  display: grid;
-  gap: var(--mono-ui--spacing-lg);
-  grid-template-columns: 1fr 60px 20px;
 }
