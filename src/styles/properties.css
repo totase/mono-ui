@@ -39,5 +39,9 @@
   --mono-ui--radius-sm: 4px;
   --mono-ui--radius-md: 8px;
   --mono-ui--radius-lg: 16px;
-  --mono-ui--radius-rounded: 100px;
+  --mono-ui--radius-rounded: 9999px;
+
+  /* Border width */
+  --mono-ui--border-default: 1px;
+  --mono-ui--border-accent: 2px;
 }
