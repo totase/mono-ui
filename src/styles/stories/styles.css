@@ -1,0 +1,25 @@
+.spacing-story {
+  background-color: var(--mono-ui--color-500);
+
+  &.spacing-story--xs {
+    width: var(--mono-ui--spacing-xs);
+  }
+  &.spacing-story--sm {
+    width: var(--mono-ui--spacing-sm);
+  }
+  &.spacing-story--md {
+    width: var(--mono-ui--spacing-md);
+  }
+  &.spacing-story--lg {
+    width: var(--mono-ui--spacing-lg);
+  }
+  &.spacing-story--xl {
+    width: var(--mono-ui--spacing-xl);
+  }
+}
+
+.spacing-story__container {
+  display: grid;
+  gap: var(--mono-ui--spacing-lg);
+  grid-template-columns: 1fr 60px 20px;
+}
