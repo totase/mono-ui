@@ -8,7 +8,6 @@ import './styles.css';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   loading?: boolean;
-  outline?: boolean;
   // TODO: Add 'flat' to 'appearance' type?
   appearance?: Appearance | 'flat';
   ref?: RefObject<HTMLButtonElement | null>;
