@@ -40,6 +40,33 @@ const CardGrid = (props: CardProps) => (
   </Flex>
 );
 
+export const Controls: Story = {
+  args: {
+    padding: 'md',
+    variant: '200',
+    radius: 'md',
+    panel: false,
+  },
+  argTypes: {
+    padding: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'radio' },
+    },
+    variant: {
+      options: variants,
+      control: { type: 'radio' },
+    },
+    radius: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'radio' },
+    },
+    panel: {
+      control: { type: 'boolean' },
+    },
+  },
+  render: (args) => <Card {...args}>Card</Card>,
+};
+
 export const Default: Omit<Story, 'args'> = {
   render: () => <CardGrid radius="md" />,
 };
