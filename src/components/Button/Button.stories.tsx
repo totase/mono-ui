@@ -30,6 +30,37 @@ const ButtonGrid = (props: any) => (
   </Flex>
 );
 
+export const Controls: Story = {
+  args: {
+    children: 'Button',
+    onClick: console.log,
+    appearance: 'default',
+    disabled: false,
+    loading: false,
+  },
+  argTypes: {
+    appearance: {
+      options: ['default', 'light', 'outline', 'flat'],
+      control: { type: 'radio' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+    loading: {
+      control: { type: 'boolean' },
+    },
+    children: {
+      control: { type: 'text' },
+    },
+    ref: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  render: (args) => <Button {...args} />,
+};
+
 export const Default: Omit<Story, 'args'> = {
   render: () => <ButtonGrid />,
 };
