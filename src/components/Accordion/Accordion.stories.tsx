@@ -5,6 +5,13 @@ import Accordion from '.';
 const meta = {
   title: 'Components/Accordion',
   component: Accordion,
+  decorators: [
+    (Story) => (
+      <div style={{ width: '300px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -15,13 +22,21 @@ type Story = StoryObj<typeof meta>;
 const AccordionComponent = (props: any) => (
   <Accordion {...props}>
     <Accordion.Header>Header</Accordion.Header>
-    <Accordion.Content>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin, nunc in bibendum venenatis, nisi nisl
-      aliquet nunc, nec tincidunt nisi nisl eget nunc. Donec sollicitudin, nunc in bibendum venenatis, nisi nisl aliquet
-      nunc, nec tincidunt nisi nisl eget nunc.
-    </Accordion.Content>
+    <Accordion.Content>Content</Accordion.Content>
   </Accordion>
 );
+
+export const Controls: Story = {
+  args: {
+    initialOpen: false,
+  },
+  argTypes: {
+    initialOpen: {
+      control: { type: 'boolean' },
+    },
+  },
+  render: (props) => <AccordionComponent {...props} />,
+};
 
 export const Default: Omit<Story, 'args'> = {
   render: () => <AccordionComponent />,
