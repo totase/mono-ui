@@ -36,13 +36,25 @@ export const Controls: Story = {
       options: ['default', 'light', 'outline'],
       control: { type: 'radio' },
     },
+    size: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'radio' },
+    },
     children: {
       control: { type: 'text' },
     },
   },
-  render: (args) => <Badge>{args.children}</Badge>,
+  render: (args) => <Badge {...args} />,
 };
 
 export const Default: Omit<Story, 'args'> = {
   render: () => <BadgeGrid />,
+};
+
+export const Small: Omit<Story, 'args'> = {
+  render: () => <BadgeGrid size="sm" />,
+};
+
+export const Large: Omit<Story, 'args'> = {
+  render: () => <BadgeGrid size="lg" />,
 };
