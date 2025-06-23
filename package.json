@@ -63,7 +63,7 @@
     "typescript-eslint": "^8.34.0",
     "vite": "^6.3.5",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.4"
   },
   "author": {
     "name": "Tommy Sevaldsen",
