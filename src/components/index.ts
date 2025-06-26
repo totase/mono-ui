@@ -5,6 +5,7 @@ export { default as Button, type ButtonProps } from './Button';
 export { default as Card, type CardProps } from './Card';
 export { default as Checkbox, type CheckboxProps } from './Checkbox';
 export { default as Flex, type FlexProps } from './Flex';
+export { default as Grid, type GridProps } from './Grid';
 export { default as Horizontal, type HorizontalProps } from './Horizontal';
 export { default as Input, type InputProps } from './Input';
 export { default as Link, type LinkProps } from './Link';
