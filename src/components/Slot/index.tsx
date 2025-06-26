@@ -2,7 +2,7 @@ import { cloneElement, HTMLAttributes, isValidElement, RefObject } from 'react';
 import cx from 'clsx';
 
 export interface SlotProps extends HTMLAttributes<HTMLElement> {
-  ref: RefObject<HTMLElement | null>;
+  ref?: RefObject<HTMLElement | null>;
 }
 
 const Slot = ({ children, className, ...rest }: SlotProps) => {
