@@ -111,8 +111,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
       - name: Run tests
         run: npm test
 
