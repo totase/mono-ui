@@ -26,15 +26,15 @@ function Component() {
 }
 ```
 
-### Components
+## Contents
 
 🚧
 
-**Defaults**
+### Components
 
 - [Accordion](./src/components/Accordion)
 
-**Form**
+### Form
 
 - [Checkbox](./src/components/Checkbox)
 - [Input](./src/components/Input)
