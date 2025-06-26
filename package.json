@@ -29,7 +29,8 @@
     "prettier": "prettier --write src/",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "peerDependencies": {
     "react": ">=19.1.0",
@@ -41,12 +42,14 @@
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "@storybook/addon-a11y": "^9.0.13",
+    "@storybook/addon-vitest": "^9.0.13",
     "@storybook/react-vite": "^9.0.13",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.5.0",
+    "@vitest/browser": "^3.2.4",
     "eslint": "^9.27.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -54,13 +57,15 @@
     "eslint-plugin-storybook": "^9.0.13",
     "globals": "^16.2.0",
     "jsdom": "^26.1.0",
+    "playwright": "^1.53.1",
     "prettier": "^3.5.3",
     "storybook": "^9.0.13",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.32.1",
     "vite": "^6.3.5",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vitest": "^3.1.4"
+    "vitest": "^3.1.4",
+    "vitest-browser-react": "^0.2.0"
   },
   "author": {
     "name": "Tommy Sevaldsen",
