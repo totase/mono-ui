@@ -22,7 +22,8 @@
   "sideEffects": false,
   "scripts": {
     "dev": "npm run storybook",
-    "test": "vitest",
+    "test": "vitest --project=unit",
+    "test-storybook": "vitest --project=storybook",
     "build": "rm -rf ./dist && vite build && tsc -p ./tsconfig.build.json",
     "build-storybook": "storybook build",
     "lint": "eslint .",

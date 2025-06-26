@@ -29,6 +29,15 @@ export default mergeConfig(
             setupFiles: ['./.storybook/vitest.setup.ts'],
           },
         },
+        {
+          test: {
+            name: 'unit',
+            globals: true,
+            environment: 'jsdom',
+            setupFiles: ['./src/test/setup.ts'],
+            pool: 'forks',
+          },
+        },
       ],
     },
   }),
