@@ -1,7 +1,8 @@
 import { InputHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Label } from '..';
+import Flex from '../Flex';
+import { Label } from '../Typography';
 
 import './styles.css';
 
@@ -17,7 +18,7 @@ const Toggle = ({ id, label, disabled, className, description, ...rest }: Toggle
   });
 
   return (
-    <div className="mono-ui-toggle__container">
+    <Flex align="center" gap="sm">
       <span className={classNames} tabIndex={0}>
         <input
           id={id}
@@ -33,7 +34,7 @@ const Toggle = ({ id, label, disabled, className, description, ...rest }: Toggle
       <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
-    </div>
+    </Flex>
   );
 };
 

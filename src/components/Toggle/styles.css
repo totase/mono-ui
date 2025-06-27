@@ -1,9 +1,3 @@
-.mono-ui-toggle__container {
-  display: flex;
-  align-items: center;
-  gap: var(--mono-ui--spacing-sm);
-}
-
 .mono-ui-toggle {
   position: relative;
 

@@ -1,14 +1,8 @@
-.mono-ui-input__container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--mono-ui--spacing-xs);
-}
-
 .mono-ui-input {
   font-size: inherit;
   border-radius: var(--mono-ui--radius-md);
 
-  border: 1px solid;
+  border: 2px solid;
   padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
 
   transition: border-color 100ms ease-in-out;

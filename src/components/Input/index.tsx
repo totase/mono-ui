@@ -1,6 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 import cx from 'clsx';
 
+import Flex from '../Flex';
 import { Label } from '../Typography';
 
 import './styles.css';
@@ -19,7 +20,7 @@ const Input = ({ id, label, description, className, type = 'text', disabled, rea
   });
 
   return (
-    <div className="mono-ui-input__container">
+    <Flex direction="column" gap="xs">
       <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
@@ -32,7 +33,7 @@ const Input = ({ id, label, description, className, type = 'text', disabled, rea
         aria-describedby={description ? `${id}-description` : undefined}
         {...rest}
       />
-    </div>
+    </Flex>
   );
 };
 

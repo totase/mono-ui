@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
+import Flex from '../Flex';
 import { Label } from '../Typography';
 
 import './styles.css';
@@ -21,7 +22,7 @@ const Textarea = ({ id, label, description, className, disabled, readOnly, rows 
   });
 
   return (
-    <div className="mono-ui-textarea__container">
+    <Flex direction="column" gap="xs">
       <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
@@ -34,7 +35,7 @@ const Textarea = ({ id, label, description, className, disabled, readOnly, rows 
         aria-describedby={description ? `${id}-description` : undefined}
         {...rest}
       />
-    </div>
+    </Flex>
   );
 };
 

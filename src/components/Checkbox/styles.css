@@ -1,18 +1,12 @@
-.mono-ui-checkbox__container {
-  display: flex;
-  align-items: center;
-  gap: var(--mono-ui--spacing-sm);
-}
-
 .mono-ui-checkbox {
   position: relative;
   transition: border-color 100ms ease;
 
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 
   border-radius: var(--mono-ui--radius-sm);
-  border: 1px solid;
+  border: 2px solid;
 
   &:not(.mono-ui-checkbox--disabled) {
     border-color: var(--mono-ui--color-300);

@@ -1,7 +1,8 @@
 import { InputHTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Label } from '..';
+import Flex from '../Flex';
+import { Label } from '../Typography';
 
 import './styles.css';
 
@@ -17,7 +18,7 @@ const Radio = ({ id, label, disabled, className, description, ...rest }: RadioPr
   });
 
   return (
-    <div className="mono-ui-radio__container">
+    <Flex align="center" gap="sm">
       <span className={classNames}>
         <input
           id={id}
@@ -31,7 +32,7 @@ const Radio = ({ id, label, disabled, className, description, ...rest }: RadioPr
       <Label id={id} disabled={disabled} description={description}>
         {label}
       </Label>
-    </div>
+    </Flex>
   );
 };
 
