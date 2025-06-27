@@ -1,14 +1,14 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Size } from '../../types';
+import { SpacingSize } from '../../types';
 
 import './styles.css';
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   justify?: 'center' | 'start' | 'end' | 'space-between' | 'space-around' | 'space-evenly';
   align?: 'center' | 'start' | 'end' | 'baseline' | 'stretch';
-  gap?: Size;
+  gap?: SpacingSize;
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   wrap?: boolean;
 }

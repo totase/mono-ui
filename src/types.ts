@@ -5,7 +5,7 @@ export type Position = {
   y: number;
 };
 
-export type Size = 'sm' | 'md' | 'lg';
+export type SpacingSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type Color = 'default' | 'light' | 'contrast';
 

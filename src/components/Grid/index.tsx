@@ -2,14 +2,14 @@ import { CSSProperties, HTMLAttributes } from 'react';
 import cx from 'clsx';
 
 import GridElement from './components/GridElement';
-import { Size } from '../../types';
+import { SpacingSize } from '../../types';
 
 import './styles.css';
 
 export interface GridProps extends HTMLAttributes<HTMLDivElement> {
   columns?: number | string;
   columnMinWidth?: number;
-  gap?: Size;
+  gap?: SpacingSize;
   align?: 'start' | 'center' | 'end';
 }
 

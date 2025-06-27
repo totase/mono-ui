@@ -1,6 +1,6 @@
 import './styles/index.css';
 
-export type { Appearance, Position, Size, Color, Weight, Align } from './types';
+export type { Appearance, Position, SpacingSize, Color, Weight, Align } from './types';
 
 export { Accordion, type AccordionProps } from './components';
 export { Arrow, type ArrowProps } from './components';

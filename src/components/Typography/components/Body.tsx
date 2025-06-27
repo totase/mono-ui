@@ -1,7 +1,7 @@
 import { ElementType, HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Color, Size, Weight } from '../../../types';
+import { Color, Weight } from '../../../types';
 
 import '../styles.css';
 
@@ -9,7 +9,7 @@ export interface BodyProps<T extends ElementType = 'p' | 'span'>
   extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
   color?: Color;
   weight?: Weight;
-  size?: Size;
+  size?: 'sm' | 'md' | 'lg';
   as?: T;
 }
 

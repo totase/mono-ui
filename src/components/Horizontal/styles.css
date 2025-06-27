@@ -8,12 +8,18 @@
   background-color: var(--mono-ui--color-500);
 }
 
-.mono-ui-horizontal--small {
+.mono-ui-horizontal--xs {
+  margin-block: var(--mono-ui--spacing-xs);
+}
+.mono-ui-horizontal--sm {
   margin-block: var(--mono-ui--spacing-sm);
 }
-.mono-ui-horizontal--medium {
+.mono-ui-horizontal--md {
   margin-block: var(--mono-ui--spacing-md) 0;
 }
-.mono-ui-horizontal--large {
+.mono-ui-horizontal--lg {
   margin-block: var(--mono-ui--spacing-lg) 0;
+}
+.mono-ui-horizontal--xl {
+  margin-block: var(--mono-ui--spacing-xl) 0;
 }

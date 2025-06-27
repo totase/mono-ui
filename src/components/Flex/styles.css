@@ -40,6 +40,9 @@
 }
 
 /* gap */
+.mono-ui-flex--gap-xs {
+  gap: var(--mono-ui--spacing-xs);
+}
 .mono-ui-flex--gap-sm {
   gap: var(--mono-ui--spacing-sm);
 }
@@ -48,6 +51,9 @@
 }
 .mono-ui-flex--gap-lg {
   gap: var(--mono-ui--spacing-lg);
+}
+.mono-ui-flex--gap-xl {
+  gap: var(--mono-ui--spacing-xl);
 }
 
 /* flex-direction */

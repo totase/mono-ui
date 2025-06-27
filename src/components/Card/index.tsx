@@ -1,14 +1,14 @@
 import { HTMLAttributes } from 'react';
 import cx from 'clsx';
 
-import { Size } from '../../types';
+import { SpacingSize } from '../../types';
 
 import './styles.css';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  padding?: Size;
+  padding?: Omit<SpacingSize, 'xs' | 'xl'>;
   variant?: '0' | '100' | '200' | '300' | '400' | '500';
-  radius?: Size;
+  radius?: 'sm' | 'md' | 'lg';
   panel?: boolean;
 }
 

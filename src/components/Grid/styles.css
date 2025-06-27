@@ -5,6 +5,9 @@
   grid-auto-flow: row;
   grid-template-columns: var(--mono-ui-grid-columns);
 
+  &.mono-ui-grid--gap-xs {
+    gap: var(--mono-ui--spacing-xs);
+  }
   &.mono-ui-grid--gap-sm {
     gap: var(--mono-ui--spacing-sm);
   }
@@ -12,6 +15,9 @@
     gap: var(--mono-ui--spacing-md);
   }
   &.mono-ui-grid--gap-lg {
+    gap: var(--mono-ui--spacing-lg);
+  }
+  &.mono-ui-grid--gap-xl {
     gap: var(--mono-ui--spacing-lg);
   }
 }
