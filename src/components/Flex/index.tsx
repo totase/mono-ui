@@ -13,7 +13,7 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
-const Flex = ({ children, className, justify, align, gap, direction = 'row', wrap = true, ...rest }: FlexProps) => {
+const Flex = ({ children, className, justify, align, gap, wrap, direction = 'row', ...rest }: FlexProps) => {
   const classNames = cx('mono-ui-flex', `mono-ui-flex--direction-${direction}`, className, {
     [`mono-ui-flex--gap-${gap}`]: !!gap,
     [`mono-ui-flex--justify-${justify}`]: !!justify,
