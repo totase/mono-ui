@@ -79,7 +79,7 @@ const Popover = ({
     if (onClose) onClose();
   };
 
-  useClickOutside([popoverRef as RefObject<HTMLElement>, anchor as unknown as RefObject<HTMLElement>], () => {
+  useClickOutside([popoverRef, anchor], () => {
     if (!ignoreClickOutside) handleClose();
   });
 
