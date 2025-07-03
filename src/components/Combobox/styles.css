@@ -1,0 +1,83 @@
+.mono-ui-combobox__container {
+  position: relative;
+}
+
+.mono-ui-combobox__options {
+  max-height: 150px;
+  position: absolute;
+  width: 100%;
+
+  overflow: hidden;
+  list-style-type: none;
+  z-index: 1000;
+
+  margin: 0;
+  padding: 0;
+  margin-block-start: var(--mono-ui--spacing-sm);
+
+  background-color: var(--mono-ui--color-white);
+  border: 1px solid var(--mono-ui--color-300);
+  border-radius: var(--mono-ui--radius-md);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mono-ui-combobox__option {
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+
+  transition:
+    background-color 150ms ease-in-out,
+    color 150ms ease-in-out;
+
+  &:not(.mono-ui-combobox__option--empty) {
+    cursor: pointer;
+  }
+  &:not(.mono-ui-combobox__option--disabled, .mono-ui-combobox__option--empty):hover {
+    background-color: var(--mono-ui--color-200);
+  }
+
+  &.mono-ui-combobox__option--selected {
+    font-weight: var(--mono-ui--font-weight-medium);
+    background-color: var(--mono-ui--color-300);
+
+    &:hover {
+      background-color: var(--mono-ui--color-200);
+    }
+  }
+  &.mono-ui-combobox__option--disabled {
+    color: var(--mono-ui--color-300);
+
+    cursor: not-allowed;
+  }
+}
+
+.mono-ui-combobox__selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mono-ui--spacing-sm);
+
+  margin: 0;
+  padding: 0;
+  margin-block-start: var(--mono-ui--spacing-sm);
+
+  list-style: none;
+}
+
+.mono-ui-combobox__selected-option {
+  cursor: pointer;
+
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-500);
+
+  font-size: var(--mono-ui--font-size-small);
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+  border-radius: var(--mono-ui--radius-rounded);
+  border: none;
+
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--mono-ui--color-400);
+  }
+}
