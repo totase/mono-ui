@@ -11,6 +11,7 @@ export interface ComboboxProps extends InputHTMLAttributes<HTMLInputElement> {
   description?: string;
   maxSelection?: number;
   options: ComboboxOptionType[];
+  selectedOptions?: ComboboxOptionType[];
   emptyText?: string;
   onOptionToggle?: (option: ComboboxOptionType, selected: boolean) => void;
 }

@@ -24,6 +24,7 @@ const Combobox = ({
   onChange,
   onOptionToggle,
   options,
+  selectedOptions,
   emptyText = 'No results',
   maxSelection = MAX_SELECTION,
   ...rest
@@ -83,7 +84,7 @@ const Combobox = ({
           aria-controls={popupOpen ? optionsId : undefined}
         />
       </Flex>
-      <ComboboxOptionsProvider value={{ inputValue, options, maxSelection, onOptionToggle }}>
+      <ComboboxOptionsProvider value={{ inputValue, options, maxSelection, selectedOptions, onOptionToggle }}>
         {popupOpen && <ComboboxOptions id={optionsId} emptyText={emptyText} />}
 
         <ComboboxSelectedOptions />

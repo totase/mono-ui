@@ -17,6 +17,7 @@ interface ComboboxOptionsProviderProps {
   children: ReactNode;
   value: Pick<ComboboxOptionsContextProps, 'inputValue' | 'maxSelection'> & {
     options: ComboboxOptionType[];
+    selectedOptions?: ComboboxOptionType[];
     onOptionToggle?: (option: ComboboxOptionType, selected: boolean) => void;
   };
 }
@@ -25,8 +26,14 @@ interface ComboboxOptionsProviderProps {
 export const ComboboxOptionsContext = createContext<ComboboxOptionsContextProps | null>(null);
 
 const ComboboxOptionsProvider = ({ children, value }: ComboboxOptionsProviderProps) => {
-  const { inputValue, maxSelection, options, onOptionToggle } = value;
-  const [selectedOptions, setSelectedOptions] = useState<ComboboxOptionType[]>([]);
+  const { inputValue, maxSelection, options, selectedOptions: externalSelectedOptions, onOptionToggle } = value;
+
+  const [internalSelectedOptions, setSelectedOptions] = useState<ComboboxOptionType[]>([]);
+
+  const selectedOptions = useMemo(
+    () => externalSelectedOptions ?? internalSelectedOptions,
+    [externalSelectedOptions, internalSelectedOptions],
+  );
 
   const limitReached = selectedOptions.length >= maxSelection;
   const filteredOptions = useMemo(() => getMatchingValuesFromList(inputValue, options), [inputValue, options]);
