@@ -94,3 +94,4 @@ const Combobox = ({
 };
 
 export default Combobox;
+export type { ComboboxProps } from './types';
