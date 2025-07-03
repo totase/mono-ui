@@ -52,8 +52,6 @@ export const ExternalSelection: StoryFn = () => {
     } else setSelectedOptions(selectedOptions.filter((selectedOption) => selectedOption !== option));
   };
 
-  console.log('selectedOptions', selectedOptions);
-
   return (
     <Combobox
       id="disabled-combobox"
