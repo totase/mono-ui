@@ -1,0 +1,70 @@
+.mono-ui-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mono-ui--spacing-sm);
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mono-ui-chips :where(li) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+
+.mono-ui-chips__chip {
+  display: flex;
+  gap: var(--mono-ui--spacing-xs);
+  align-items: center;
+
+  margin: 0;
+  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
+
+  color: var(--mono-ui--color-500);
+  border: 1px solid var(--mono-ui--color-500);
+  border-radius: var(--mono-ui--radius-rounded);
+
+  cursor: pointer;
+  transition:
+    color 100ms ease-in-out,
+    background-color 150ms ease-in-out;
+}
+
+.mono-ui-chips__removable-chip {
+  background-color: var(--mono-ui--color-white);
+
+  &:hover {
+    color: var(--mono-ui--color-white);
+    background-color: var(--mono-ui--color-500);
+  }
+}
+
+.mono-ui-chips__toggle-chip {
+  background-color: var(--mono-ui--color-white);
+
+  &:hover {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-200);
+  }
+  &:active {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-white);
+  }
+}
+
+.mono-ui-chips__toggle-chip--selected {
+  color: var(--mono-ui--color-white);
+  background-color: var(--mono-ui--color-500);
+
+  &:hover {
+    color: var(--mono-ui--color-white);
+    background-color: var(--mono-ui--color-400);
+  }
+  &:active {
+    color: var(--mono-ui--color-500);
+    background-color: var(--mono-ui--color-white);
+  }
+}
