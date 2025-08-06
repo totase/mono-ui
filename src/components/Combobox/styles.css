@@ -53,31 +53,5 @@
 }
 
 .mono-ui-combobox__selected-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--mono-ui--spacing-sm);
-
-  margin: 0;
-  padding: 0;
   margin-block-start: var(--mono-ui--spacing-sm);
-
-  list-style: none;
-}
-
-.mono-ui-combobox__selected-option {
-  cursor: pointer;
-
-  color: var(--mono-ui--color-white);
-  background-color: var(--mono-ui--color-500);
-
-  font-size: var(--mono-ui--font-size-small);
-  padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
-  border-radius: var(--mono-ui--radius-rounded);
-  border: none;
-
-  transition: background-color 150ms ease-in-out;
-
-  &:hover {
-    background-color: var(--mono-ui--color-400);
-  }
 }
