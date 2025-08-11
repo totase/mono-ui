@@ -41,7 +41,7 @@
     "clsx": "^2.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.33.0",
     "@storybook/addon-a11y": "^9.1.0",
     "@storybook/addon-vitest": "^9.1.0",
     "@storybook/react-vite": "^9.1.0",
