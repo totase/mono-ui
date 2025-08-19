@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
-    "@storybook/addon-a11y": "^9.1.0",
-    "@storybook/addon-vitest": "^9.1.0",
-    "@storybook/react-vite": "^9.1.0",
+    "@storybook/addon-a11y": "^9.1.2",
+    "@storybook/addon-vitest": "^9.1.2",
+    "@storybook/react-vite": "^9.1.2",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
