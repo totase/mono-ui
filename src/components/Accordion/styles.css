@@ -8,7 +8,6 @@
 .mono-ui-accordion__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--mono-ui--spacing-sm);
 
   border: 0;
@@ -17,7 +16,27 @@
   cursor: pointer;
 
   width: 100%;
-  padding: var(--mono-ui--spacing-md) var(--mono-ui--spacing-sm);
+  padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-sm);
+
+  &:hover .mono-ui-accordion__header-icon {
+    background-color: var(--mono-ui--color-200);
+  }
+}
+.mono-ui-accordion__header-icon {
+  width: 28px;
+  height: 28px;
+  padding: var(--mono-ui-spacing-xs);
+
+  display: grid;
+  place-content: center;
+
+  border-radius: var(--mono-ui--radius-sm);
+  transition: background-color 150ms ease-in-out;
+
+  /* visually align */
+  i {
+    margin-top: 2px;
+  }
 }
 
 .mono-ui-accordion__content {

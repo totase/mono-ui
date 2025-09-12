@@ -22,8 +22,11 @@ const AccordionHeader = ({ children, className, onClick, ...rest }: AccordionHea
 
   return (
     <button className={classNames} onClick={handleClick} aria-expanded={context?.open} {...rest}>
+      <span className="mono-ui-accordion__header-icon">
+        <Arrow direction={context?.open ? 'up' : 'down'} />
+      </span>
+
       {children}
-      <Arrow direction={context?.open ? 'up' : 'down'} />
     </button>
   );
 };
