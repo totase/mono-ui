@@ -28,6 +28,8 @@ const AccordionComponent = (props: any) => (
 
 export const Controls: Story = {
   args: {
+    title: 'Accordion',
+    content: 'Accordion content',
     initialOpen: false,
   },
   argTypes: {
@@ -35,7 +37,12 @@ export const Controls: Story = {
       control: { type: 'boolean' },
     },
   },
-  render: (props) => <AccordionComponent {...props} />,
+  render: (args) => (
+    <Accordion {...args}>
+      <Accordion.Header>{args.title}</Accordion.Header>
+      <Accordion.Content>{args.content}</Accordion.Content>
+    </Accordion>
+  ),
 };
 
 export const Default: Omit<Story, 'args'> = {

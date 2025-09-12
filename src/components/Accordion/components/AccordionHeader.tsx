@@ -4,8 +4,14 @@ import cx from 'clsx';
 import Arrow from '../../Arrow';
 import { AccordionContext } from '../context';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface AccordionHeaderProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+export interface AccordionHeaderProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
+  /**
+   * Optional function to call when accordion is toggled
+   *
+   * @param open - Whether the accordion is open or closed when clicked
+   */
+  onClick?: (open: boolean) => void;
+}
 
 const AccordionHeader = ({ children, className, onClick, ...rest }: AccordionHeaderProps) => {
   const context = useContext(AccordionContext);
@@ -14,8 +20,8 @@ const AccordionHeader = ({ children, className, onClick, ...rest }: AccordionHea
     'mono-ui-accordion__header--open': context?.open,
   });
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (onClick) onClick(e);
+  const handleClick = () => {
+    if (onClick) onClick(!context?.open);
 
     context?.toggleOpen(!context.open);
   };
