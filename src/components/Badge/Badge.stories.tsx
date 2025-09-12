@@ -37,7 +37,7 @@ export const Controls: Story = {
       control: { type: 'radio' },
     },
     size: {
-      options: ['sm', 'md', 'lg'],
+      options: ['regular', 'small'],
       control: { type: 'radio' },
     },
     children: {
@@ -52,9 +52,5 @@ export const Default: Omit<Story, 'args'> = {
 };
 
 export const Small: Omit<Story, 'args'> = {
-  render: () => <BadgeGrid size="sm" />,
-};
-
-export const Large: Omit<Story, 'args'> = {
-  render: () => <BadgeGrid size="lg" />,
+  render: () => <BadgeGrid size="small" />,
 };

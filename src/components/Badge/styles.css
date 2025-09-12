@@ -3,15 +3,12 @@
 
   border-radius: var(--mono-ui--radius-rounded);
 
-  &.mono-ui-badge--sm {
+  &.mono-ui-badge--small {
     font-size: var(--mono-ui--font-size-small);
     padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-sm);
   }
-  &.mono-ui-badge--md {
+  &.mono-ui-badge--regular {
     padding: var(--mono-ui--spacing-xs) var(--mono-ui--spacing-md);
-  }
-  &.mono-ui-badge--lg {
-    padding: var(--mono-ui--spacing-sm) var(--mono-ui--spacing-md);
   }
 }
 
