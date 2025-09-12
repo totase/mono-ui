@@ -81,6 +81,15 @@
 
 .mono-ui-table__expandable-row__content {
   transition: opacity 150ms ease-in-out;
+
+  &:last-child {
+    td:first-child {
+      border-bottom-left-radius: var(--mono-ui--radius-md);
+    }
+    td:last-child {
+      border-bottom-right-radius: var(--mono-ui--radius-md);
+    }
+  }
 }
 
 .mono-ui-table__expandable-row {
@@ -88,6 +97,14 @@
 
   &.mono-ui-table__expandable-row--open .mono-ui-table__cell {
     border-bottom-color: transparent;
+  }
+  &:not(.mono-ui-table__expandable-row--open):has(+ tr:last-child) {
+    td:first-child {
+      border-bottom-left-radius: var(--mono-ui--radius-md);
+    }
+    td:last-child {
+      border-bottom-right-radius: var(--mono-ui--radius-md);
+    }
   }
 
   &:not(.mono-ui-table__expandable-row--open) + .mono-ui-table__expandable-row__content {
