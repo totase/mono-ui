@@ -4,7 +4,7 @@ Minimalistic and accessible components for React projects.
 
 ## About
 
-- [Storybook](https://totase.github.io/mono-ui/)
+- [Storybook](https://totase.github.io/mono-ui)
 
 ## Installation
 
@@ -33,14 +33,33 @@ function Component() {
 ### Components
 
 - [Accordion](./src/components/Accordion)
-- [Badge](./src/components/Badge/)
+- [Badge](./src/components/Badge)
+- [Button](./src/components/Button)
+- [Card](./src/components/Card)
+- [Checkbox](./src/components/Checkbox)
+- [Chips](./src/components/Chips)
+- [Flex](./src/components/Flex)
+- [Grid](./src/components/Grid)
+- [Horizontal](./src/components/Horizontal)
+- [Link](./src/components/Link)
+- [List](./src/components/List)
+- [Modal](./src/components/Modal)
+- [Pagination](./src/components/Pagination)
+- [Popover](./src/components/Popover)
+- [Slot](./src/components/Slot)
+- [Table](./src/components/Table)
+- [Tabs](./src/components/Tabs)
+- [Tooltip](./src/components/Tooltip)
+- [Typography](./src/components/Typography)
 
 ### Form
 
 - [Checkbox](./src/components/Checkbox)
+- [Combobox](./src/components/Combobox)
 - [Input](./src/components/Input)
 - [Radio](./src/components/Radio)
 - [Select](./src/components/Select)
+- [Textarea](./src/components/Textarea)
 - [Toggle](./src/components/Toggle)
 
 ## License
