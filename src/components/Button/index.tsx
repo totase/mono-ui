@@ -7,8 +7,15 @@ import './styles.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  /**
+   * Disables the button and makes it non-interactive
+   */
   loading?: boolean;
-  // TODO: Add 'flat' to 'appearance' type?
+  /**
+   * Set the component appearance
+   *
+   * @type 'default' | 'light' | 'outline' | 'flat'
+   */
   appearance?: Appearance | 'flat';
   ref?: RefObject<HTMLButtonElement | null>;
 }

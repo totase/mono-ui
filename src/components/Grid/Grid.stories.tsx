@@ -29,7 +29,7 @@ export const Default: Omit<Story, 'args'> = {
 export const GridElement: Omit<Story, 'args'> = {
   render: () => (
     <div style={{ width: '500px', height: '400px' }}>
-      <Grid columns={`repeat(3, minmax(0, 1fr))`} gap="md">
+      <Grid columns={'repeat(3, minmax(0, 1fr))'} gap="md">
         <Grid.Element columnSpanStart={1} columnSpanWidth={2} style={{ backgroundColor: 'black', color: 'white' }}>
           <div>1</div>
         </Grid.Element>

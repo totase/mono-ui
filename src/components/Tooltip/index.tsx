@@ -7,7 +7,13 @@ import { Body, Slot } from '..';
 import './styles.css';
 
 export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
+  /**
+   * Text to display inside the tooltip
+   */
   content: string;
+  /**
+   * Element that triggers the tooltip on hover
+   */
   children: ReactNode;
 }
 

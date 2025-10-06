@@ -33,6 +33,7 @@ function Component() {
 ### Components
 
 - [Accordion](./src/components/Accordion)
+- [Badge](./src/components/Badge/)
 
 ### Form
 

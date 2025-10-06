@@ -7,6 +7,11 @@ import { ComboboxOptionType } from '../types';
 export interface ComboboxOptionProps extends HTMLAttributes<HTMLLIElement> {
   option: ComboboxOptionType;
   disabled: boolean;
+  /**
+   * Function to toggle the selection state of an option
+   *
+   * @param option The option to toggle
+   */
   toggleOption: (option: ComboboxOptionType) => void;
   selectedOptions: ComboboxOptionType[];
 }

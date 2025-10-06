@@ -7,8 +7,21 @@ import './styles.css';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   padding?: Omit<SpacingSize, 'xs' | 'xl'>;
+  /**
+   * Set the color variant
+   *
+   * @type '0' | '100' | '200' | '300' | '400' | '500'
+   */
   variant?: '0' | '100' | '200' | '300' | '400' | '500';
+  /**
+   * Set the border radius
+   *
+   * @type 'sm' | 'md' | 'lg'
+   */
   radius?: 'sm' | 'md' | 'lg';
+  /**
+   * Styles the card as a panel with a border
+   */
   panel?: boolean;
 }
 

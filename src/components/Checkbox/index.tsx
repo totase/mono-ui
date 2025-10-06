@@ -9,6 +9,9 @@ import './styles.css';
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
   id: string;
   label: string;
+  /**
+   * Optional help text
+   */
   description?: string;
 }
 
