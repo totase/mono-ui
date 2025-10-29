@@ -3,6 +3,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 
 import Combobox from '.';
 import { ComboboxOptionType } from './types';
+import { isEqual } from './utils';
 
 const meta = {
   title: 'Components/Form/Combobox',
@@ -46,10 +47,32 @@ export const Disabled: Omit<Story, 'args'> = {
 export const ExternalSelection: StoryFn = () => {
   const [selectedOptions, setSelectedOptions] = useState<ComboboxOptionType[]>([]);
 
-  const handleOptionToggle = (option, selected) => {
-    if (selected) {
-      setSelectedOptions([...selectedOptions, option]);
-    } else setSelectedOptions(selectedOptions.filter((selectedOption) => selectedOption !== option));
+  const handleOptionToggle = (option: ComboboxOptionType, selected: boolean) => {
+    if (selected) setSelectedOptions((prev) => [...prev, option]);
+    else setSelectedOptions((prev) => prev.filter((selectedOption) => selectedOption !== option));
+  };
+
+  return (
+    <Combobox
+      id="disabled-combobox"
+      label="Combobox"
+      options={options}
+      selectedOptions={selectedOptions}
+      onOptionToggle={handleOptionToggle}
+    />
+  );
+};
+
+export const SelectedOptions: StoryFn = () => {
+  const [selectedOptions, setSelectedOptions] = useState<ComboboxOptionType[]>([
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
+  ]);
+
+  const handleOptionToggle = (option: ComboboxOptionType, selected: boolean) => {
+    if (selected) setSelectedOptions((prev) => [...prev, option]);
+    else setSelectedOptions((prev) => prev.filter((selectedOption) => !isEqual(selectedOption, option)));
   };
 
   return (
