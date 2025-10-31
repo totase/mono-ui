@@ -10,6 +10,7 @@
 
   &:not(.mono-ui-radio--disabled) {
     border-color: var(--mono-ui--color-300);
+    background-color: var(--mono-ui--color-white);
   }
   &:not(.mono-ui-radio--disabled):hover,
   &:has(input[type='radio']:checked) {

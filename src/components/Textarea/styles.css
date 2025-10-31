@@ -19,6 +19,7 @@
 .mono-ui-textarea--disabled {
   cursor: not-allowed;
   border-color: var(--mono-ui--color-200);
+  background-color: var(--mono-ui--color-white);
 }
 
 .mono-ui-textarea--readOnly {

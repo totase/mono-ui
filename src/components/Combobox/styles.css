@@ -47,6 +47,7 @@
   }
   &.mono-ui-combobox__option--disabled {
     color: var(--mono-ui--color-300);
+    background-color: var(--mono-ui--color-white);
 
     cursor: not-allowed;
   }

@@ -18,6 +18,7 @@
 .mono-ui-input--disabled {
   cursor: not-allowed;
   border-color: var(--mono-ui--color-200);
+  background-color: var(--mono-ui--color-white);
 }
 
 .mono-ui-input--readOnly {
