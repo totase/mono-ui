@@ -5,6 +5,7 @@ export { default as Button, type ButtonProps } from './Button';
 export { default as Card, type CardProps } from './Card';
 export { default as Checkbox, type CheckboxProps } from './Checkbox';
 export { default as Chips, type ChipsProps } from './Chips';
+export { default as ChipsInput, type ChipsInputProps } from './ChipsInput';
 export { default as Combobox, type ComboboxProps } from './Combobox';
 export { default as Flex, type FlexProps } from './Flex';
 export { default as Grid, type GridProps } from './Grid';

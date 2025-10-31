@@ -1,0 +1,32 @@
+.mono-ui-chips-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mono-ui--spacing-xs);
+
+  &:not(.mono-ui-input--disabled) {
+    cursor: text;
+  }
+
+  .mono-ui-chips {
+    gap: var(--mono-ui--spacing-xs);
+  }
+}
+
+.mono-ui-chips-input--focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.mono-ui-input--disabled .mono-ui-chips-input__input {
+  cursor: not-allowed;
+}
+
+.mono-ui-chips-input__input {
+  font-size: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &:disabled {
+    background-color: var(--mono-ui--color-white);
+  }
+}
