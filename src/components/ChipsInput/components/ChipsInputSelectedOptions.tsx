@@ -8,16 +8,17 @@ export interface ChipsInputSelectedOptionsProps {
 
 const ChipsInputSelectedOptions = ({ selectedOptions, removeSelectedOption }: ChipsInputSelectedOptionsProps) => {
   return (
-    <Chips>
+    <Chips className="mono-ui-chips-input__selected-options">
       {selectedOptions.map((option) => (
         <Chips.Removable
           key={`option-${option}`}
+          className="mono-ui-chips-input__selected-option"
           onClick={(e) => {
             e.stopPropagation();
             removeSelectedOption(option);
           }}
         >
-          {option}
+          <span className="mono-ui-chips-input__selected-option-label">{option}</span>
         </Chips.Removable>
       ))}
     </Chips>

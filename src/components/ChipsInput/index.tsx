@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useMemo, useRef, useState } from 'react';
+import { InputHTMLAttributes, KeyboardEvent, useMemo, useRef, useState } from 'react';
 import cx from 'clsx';
 
 import Flex from '../Flex';
@@ -66,33 +66,44 @@ const ChipsInput = ({
     onOptionRemove?.(option);
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (limitReached) return;
+  const addOption = (value: string) => {
+    const options = value.split(',');
 
-    if (onChange) onChange(event);
-    if (event.target.value.includes(',')) {
-      const options = event.target.value.split(',');
+    // remove empty strings
+    const nonEmptyOptions = options.filter((opt) => opt.trim() !== '');
 
-      // remove empty strings
-      const nonEmptyOptions = options.filter((opt) => opt.trim() !== '');
+    // remove options already included in selectedOptions
+    const filteredOptions = nonEmptyOptions.filter((opt) => !selectedOptions.includes(opt.trim()));
 
-      // remove options already included in selectedOptions
-      const filteredOptions = nonEmptyOptions.filter((opt) => !selectedOptions.includes(opt.trim()));
+    // only keep options that don't exceed maxSelection
+    const availableOptions = maxSelection - selectedOptions.length;
+    if (filteredOptions.length > availableOptions) {
+      filteredOptions.splice(availableOptions);
+    }
 
-      // only keep options that don't exceed maxSelection
-      const availableOptions = maxSelection - selectedOptions.length;
-      if (filteredOptions.length > availableOptions) {
-        filteredOptions.splice(availableOptions);
-      }
+    const trimmedOptions = filteredOptions.map((opt) => opt.trim());
 
-      setSelectedOptions((prev) => [...prev, ...filteredOptions]);
-      onOptionAdd?.(filteredOptions);
+    setSelectedOptions((prev) => [...prev, ...trimmedOptions]);
+    onOptionAdd?.(trimmedOptions);
 
-      setInputValue('');
-    } else setInputValue(event.target.value);
+    setInputValue('');
   };
 
-  const handleKeyDown = () => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) onChange(event);
+
+    if (event.target.value.includes(',')) addOption(event.target.value);
+    else setInputValue(event.target.value);
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<Element>) => {
+    if (e.key === 'Enter') {
+      const target = e.target as HTMLInputElement;
+      addOption(target.value);
+
+      return;
+    }
+
     if (inputValue === '' && selectedOptions.length > 0) {
       const lastOption = selectedOptions[selectedOptions.length - 1];
       removeSelectedOption(lastOption);
@@ -107,7 +118,7 @@ const ChipsInput = ({
     if (chipsInputRef.current) chipsInputRef.current.classList.remove('mono-ui-chips-input--focus');
   };
 
-  const onKeyDown = useKeyDown({ key: 'Backspace', action: handleKeyDown });
+  const onKeyDown = useKeyDown({ keys: ['Backspace', 'Enter'], action: handleKeyDown });
 
   return (
     <Flex direction="column" gap="xs">
@@ -123,7 +134,9 @@ const ChipsInput = ({
         onClick={handleClick}
         ref={chipsInputRef}
       >
-        <ChipsInputSelectedOptions selectedOptions={selectedOptions} removeSelectedOption={removeSelectedOption} />
+        {selectedOptions.length > 0 && (
+          <ChipsInputSelectedOptions selectedOptions={selectedOptions} removeSelectedOption={removeSelectedOption} />
+        )}
 
         <input
           id={id}
