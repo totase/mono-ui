@@ -13,6 +13,7 @@
   padding: 0;
   list-style: none;
   display: block;
+  max-width: 100%;
 }
 
 .mono-ui-chips__chip {
