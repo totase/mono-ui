@@ -55,6 +55,7 @@ function Component() {
 ### Form
 
 - [Checkbox](./src/components/Checkbox)
+- [ChipsInput](./src/components/ChipsInput)
 - [Combobox](./src/components/Combobox)
 - [Input](./src/components/Input)
 - [Radio](./src/components/Radio)
